@@ -38,4 +38,54 @@
 .form-range {
   width: 80px;
   height: 50px;
+  color: rgb(197, 195, 195);
+}
+
+.activities ul li > i {
+  font-size: 11px;
+  text-align: center;
+  vertical-align: middle;
+}
+.activities .row i {
+  font-size: 17px;
+}
+
+.amici {
+  font-size: 1.2rem;
+}
+
+.feed .profile-picture {
+  width: 43px;
+  height: 43px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.feed .profile-picture > img {
+  width: 100%;
+  object-fit: cover;
+}
+.feed-text h6 {
+  margin-bottom: 0;
+  font-weight: 600;
+}
+
+.feed-text p {
+  font-size: 0.7rem;
+  margin-bottom: 0;
+}
+.feed-text p + p {
+  font-size: 0.8rem;
+}
+.feed-text i {
+  padding-right: 5px;
+}
+
+.feed-text span {
+  font-size: 1.2rem;
+  vertical-align: middle;
+  color: white;
+}
+
+.feed-time {
+  font-size: 0.7rem;
 }
