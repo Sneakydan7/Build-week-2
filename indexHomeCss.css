@@ -22,13 +22,13 @@
   color: white;
 }
 
-i {
+.link-underline i {
   color: #b2b2b2;
   font-size: 23px;
   padding-right: 10px;
 }
 
-i:hover {
+.link-underline i:hover {
   color: white;
 }
 
@@ -87,6 +87,10 @@ i:hover {
   width: 80px;
   height: 50px;
   color: rgb(197, 195, 195);
+}
+
+.activities {
+  color: #b2b2b2;
 }
 
 .activities ul li > i {
