@@ -2,9 +2,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Circular";
 }
 
-.page {
+/* .page {
   display: flex;
 }
 .library {
@@ -19,4 +20,22 @@
 .activities {
   min-width: 270px;
   background-color: black;
+} */
+
+.background-main {
+  background-color: #181818;
+}
+.icon-color {
+  color: #9f9f9f;
+}
+
+.song-slider {
+  width: 100%;
+}
+.slider {
+  width: 80%;
+}
+.form-range {
+  width: 80px;
+  height: 50px;
 }
