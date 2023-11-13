@@ -197,13 +197,68 @@
         </div>
       </div>
     </div>
-    <div class="player">
-      <div class="row">
-        <div class="col-12 fixed-bottom bg-secondary">
-          <div class="row">
-            <div class="col"></div>
+    <div
+      class="player container-fluid d-flex fixed-bottom background-main d-flex align-items-center justify-content-between p-3"
+    >
+      <div class="song-current d-flex align-items-center">
+        <div class="image">
+          <img
+            src="./assets/imgs/search/image-12.jpg"
+            alt=""
+            style="width: 60px"
+          />
+        </div>
+        <div class="text-area px-3">
+          <p class="text-white text-truncate m-0">Fat Funny Friend</p>
+          <p class="text-secondary text-truncate m-0">Maddie Zahm</p>
+        </div>
+        <div class="heart px-3">
+          <i class="far fa-heart text-white"></i>
+        </div>
+      </div>
+      <div
+        class="song-player d-flex flex-column align-items-center flex-grow-1"
+      >
+        <div class="song-controls d-flex align-items-center">
+          <a href="" class="text-white mx-3 fs-4"
+            ><i class="fas fa-random"></i
+          ></a>
+          <a href="" class="text-white mx-3 fs-4"
+            ><i class="fas fa-step-backward"></i
+          ></a>
+          <a href="" class="text-white mx-3 fs-1"
+            ><i class="fas fa-play-circle"></i
+          ></a>
+          <a href="" class="text-white mx-3 fs-4"
+            ><i class="fas fa-step-forward"></i
+          ></a>
+          <a href="" class="text-white mx-3 fs-4"
+            ><i class="fas fa-redo"></i
+          ></a>
+        </div>
+        <div class="song-slider">
+          <div
+            id="timeline "
+            class="d-flex align-items-center justify-content-center"
+          >
+            <span id="current-time">--:--</span>
+
+            <input type="range" class="slider" id="customRange1" />
+            <span id="total-time">--:--</span>
           </div>
         </div>
+      </div>
+      <div class="side-controls d-flex align-items-center">
+        <a href="#" class="icon-color me-2"
+          ><i class="fas fa-microphone icon-color"></i
+        ></a>
+        <a href="#" class="icon-color me-2"
+          ><i class="fas fa-stream icon-color"></i
+        ></a>
+        <a href="#" class="me-2"><i class="fas fa-fax icon-color"></i></a>
+        <a href="#"><i class="fas fa-volume-up me-2 icon-color"></i></a>
+        <input type="range" class="form-range me-2" id="customRange1" />
+        <a href="#"><i class="fas fa-expand-alt me-2 icon-color"></i></a>
       </div>
     </div>
   </body>
