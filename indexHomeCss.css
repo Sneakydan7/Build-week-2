@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.page {
+  display: flex;
+}
+.library {
+  min-width: 380px;
+  background-color: black;
+  height: 100vh;
+}
+.main-content {
+  flex-grow: 7;
+  background-color: red;
+}
+.activities {
+  min-width: 270px;
+  background-color: black;
+}
