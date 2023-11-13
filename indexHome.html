@@ -16,32 +16,69 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link rel="stylesheet" href="./assets/css/circular-font.css" />
     <link rel="stylesheet" href="./indexHomeCss.css" />
     <title>Document</title>
   </head>
   <body>
     <div class="container-fluid">
       <div class="row">
-        <div class="col-3 bg-dark" style="height: 100vh">1</div>
+        <div class="col-3 bg-dark">1</div>
         <div class="col-7 bg-secondary">2</div>
         <div class="col-2 activities">
-          <div class="container p-0">
-            <ul class="navbar-nav justify-content-end flex-row align-center mb-2">
-              <li class="nav-item px-3"><i class="far fa-window-minimize"></i></li>
-              <li class="nav-item px-3"><i class="far fa-window-restore text-white"></i></li>
-              <li class="nav-item ps-3"><i class="fas fa-times"></i></li>
-            </ul>
-            <div class="row mb-3">
-              <div class="col-8 text-white fw-bold me-auto">Attività amici</div>
+          <div class="container ps-2 pe-0">
+            <div class="row my-5">
+              <div class="col-8 ps-3 text-white fw-bold me-auto amici">Attività amici</div>
               <div class="col-auto"><i class="fas fa-user-plus"></i></div>
               <div class="col-auto"><i class="fas fa-times"></i></div>
             </div>
-            <div class="row feed">
+            <div class="container d-flex feed p-0">
               <div>
-                <div><img src="./assets/imgs/main/" alt="" /></div>
+                <div class="profile-picture me-3">
+                  <img
+                    src="./assets/imgs/main/depositphotos_51405259-stock-illustration-male-avatar-profile-picture-use.jpg"
+                    alt=""
+                  />
+                </div>
               </div>
-              <div></div>
-              <div></div>
+              <div class="feed-text flex-grow-1">
+                <h6>Charlie Hookman</h6>
+                <p>In Camera <span>·</span> Yumi Zouma</p>
+                <p><i class="fas fa-compact-disc"></i>EP III</p>
+              </div>
+              <div class="feed-time">4 ore</div>
+            </div>
+            <div class="container d-flex mt-5 feed p-0">
+              <div>
+                <div class="profile-picture me-3">
+                  <img
+                    src="./assets/imgs/main/depositphotos_51405259-stock-illustration-male-avatar-profile-picture-use.jpg"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div class="feed-text flex-grow-1">
+                <h6>lightdark02</h6>
+                <p>Aimed to Kill <span>·</span> Jade LeMac</p>
+                <p><i class="fas fa-compact-disc"></i>Aimed to Kill</p>
+              </div>
+              <div class="feed-time">8 ore</div>
+            </div>
+            <div class="container d-flex mt-5 feed p-0">
+              <div>
+                <div class="profile-picture me-3">
+                  <img
+                    src="./assets/imgs/main/depositphotos_51405259-stock-illustration-male-avatar-profile-picture-use.jpg"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div class="feed-text flex-grow-1">
+                <h6>Valeria Traverso</h6>
+                <p>New Kings <span>·</span> Sleeping Wolf</p>
+                <p><i class="fab fa-itunes-note"></i>Twint Badass Mood</p>
+              </div>
+              <div class="feed-time">3 giorni</div>
             </div>
           </div>
         </div>
