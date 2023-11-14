@@ -141,3 +141,98 @@
 .feed-time {
   font-size: 0.7rem;
 }
+
+/*ARTIST PAGE CSS:*/
+#central-page {
+  background: linear-gradient(
+    180deg,
+    rgba(42, 42, 41, 0.958) 0%,
+    rgba(29, 29, 29, 0.936) 35%,
+    rgb(18, 18, 18, 0.961) 53%
+  );
+  color: #b2b2b2;
+}
+
+.artist-cover {
+  position: relative;
+  height: 380px;
+}
+
+.artist-cover img {
+  height: 380px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.artist-info {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+}
+
+.artist-verified {
+  margin-bottom: -15px;
+}
+
+.artist-verified i {
+  color: #5591ed;
+  font-size: 22px;
+}
+
+.artist-verified span {
+  font-size: 13px;
+}
+
+.artist-cover-title {
+  font-size: 80px;
+}
+
+.artist-listeners {
+  font-size: 14px;
+}
+
+.artist-playlist button {
+  color: #f3f3f3;
+  background-color: transparent;
+  border: #f3f3f3 1px solid;
+  font-size: 10px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  border-radius: 4px;
+  padding: 5px;
+  padding-left: 13px;
+  padding-right: 13px;
+}
+
+.artist-badge-heart div {
+  width: fit-content;
+}
+
+.artist-badge-heart div > div {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.artist-badge-heart img {
+  object-fit: cover;
+  width: 100%;
+}
+
+.artist-badge-heart i {
+  color: #4dd458;
+  font-size: 20px;
+  margin-bottom: -8px;
+  margin-right: -6px;
+}
+
+.artist-badge-name {
+  font-size: 13px;
+}
+
+.popular-playlist-songs .popular-songs-list::before {
+  counter-increment: my-sec-counter 1;
+  content: counter(my-sec-counter);
+  min-width: 10px;
+}
