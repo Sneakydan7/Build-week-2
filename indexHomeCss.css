@@ -4,6 +4,11 @@
   box-sizing: border-box;
   font-family: "Circular";
 }
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
 
 #left-sidebar {
   display: flex;
@@ -38,7 +43,8 @@
   flex-grow: 1;
 }
 
-#scroll ul.nav {
+#scroll ul {
+  height: calc(100% - 101px);
   overflow-y: scroll;
 }
 
@@ -161,6 +167,8 @@
 /* ALBUM.HTML  */
 
 .album {
+  height: calc(100% - 100px);
+  overflow-y: auto;
   background: rgb(226, 196, 80);
   background: linear-gradient(
     180deg,
@@ -213,4 +221,29 @@
 
 .album main {
   background-color: #181818;
+}
+.album-song {
+  counter-increment: myCounter 1;
+}
+.album-song::before {
+  content: counter(myCounter);
+  font-size: 1.3rem;
+  transform: translateY(9px);
+  min-width: 20px;
+}
+#album-songs-top::before {
+  content: "#";
+  font-size: 1.3rem;
+}
+#album-songs-top i {
+  font-size: 1.3rem;
+}
+
+.song-title {
+  font-size: 19px;
+  color: rgb(223, 219, 219);
+  margin: 0;
+}
+.song-artist {
+  color: #8f8d8d;
 }
