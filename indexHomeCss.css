@@ -7,16 +7,15 @@
 body {
   display: flex;
 }
+
 ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+.options > ul {
+  min-width: 350px;
 }
 
 #left-sidebar {
@@ -62,6 +61,7 @@ ul {
   height: calc(100% - 101px);
   overflow-y: scroll;
   max-width: 360px;
+  margin-top: 15px;
 }
 
 #scroll ul li {
@@ -264,23 +264,14 @@ ul {
     rgb(18, 18, 18, 0.961) 53%
   );
   color: #b2b2b2;
+  flex-grow: 1;
 }
 
 .artist-cover {
-  position: relative;
+  background-image: url(https://therockrevival.com/wp-content/uploads/2023/02/308707431_623756372436903_6197440860849993096_n-1024x683.jpg);
   height: 380px;
-}
-
-.artist-cover img {
-  height: 380px;
-  width: 100%;
   object-fit: cover;
-}
-
-.artist-info {
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
+  background-size: 100%;
 }
 
 .artist-verified {
@@ -362,7 +353,7 @@ ul {
 /* HOMEPAGE CLASSES */
 
 .scroll {
-  height: calc(100% - 116px);
+  height: calc(100% - 101px);
   overflow-y: auto;
 }
 
@@ -377,7 +368,7 @@ ul {
 }
 .arrow-left {
   padding-right: 3px;
-  margin-inline: 15px;
+  margin-right: 15px;
 }
 .arrow-right {
   padding-left: 3px;
