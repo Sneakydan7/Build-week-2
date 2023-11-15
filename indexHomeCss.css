@@ -204,6 +204,15 @@
   padding-right: 13px;
 }
 
+.show-more {
+  font-size: 11px;
+  letter-spacing: 1px;
+}
+
+.popular-songs-list p {
+  font-size: 14px;
+}
+
 .artist-badge-heart div {
   width: fit-content;
 }
