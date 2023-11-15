@@ -7,16 +7,15 @@
 body {
   display: flex;
 }
+
 ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+.options > ul {
+  min-width: 350px;
 }
 
 #left-sidebar {
@@ -62,6 +61,7 @@ ul {
   height: calc(100% - 101px);
   overflow-y: scroll;
   max-width: 360px;
+  margin-top: 15px;
 }
 
 #scroll ul li {
@@ -170,7 +170,7 @@ ul {
 /* ALBUM.HTML  */
 
 .album {
-  height: calc(100%-101px);
+  height: calc(100% - 101px);
   flex-grow: 1;
   overflow-y: auto;
 
@@ -361,7 +361,7 @@ ul {
 /* HOMEPAGE CLASSES */
 
 .scroll {
-  height: calc(100% - 116px);
+  height: calc(100% - 101px);
   overflow-y: auto;
 }
 
@@ -376,7 +376,7 @@ ul {
 }
 .arrow-left {
   padding-right: 3px;
-  margin-inline: 15px;
+  margin-right: 15px;
 }
 .arrow-right {
   padding-left: 3px;
