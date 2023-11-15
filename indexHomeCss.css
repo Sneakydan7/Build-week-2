@@ -24,7 +24,7 @@ ul {
   flex-direction: column;
   align-items: start;
   padding-right: 2px;
-  min-width: 320px;
+  min-width: 390px;
 }
 
 .text-grey {
@@ -359,6 +359,9 @@ ul {
 }
 
 /* HOMEPAGE CLASSES */
+
+.homepage {
+}
 
 .scroll {
   height: calc(100% - 116px);
