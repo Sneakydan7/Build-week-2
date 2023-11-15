@@ -4,6 +4,9 @@
   box-sizing: border-box;
   font-family: "Circular";
 }
+body {
+  display: flex;
+}
 ul {
   list-style: none;
   padding: 0;
@@ -13,7 +16,9 @@ ul {
 #left-sidebar {
   display: flex;
   flex-direction: column;
+  align-items: start;
   padding-right: 2px;
+  min-width: 320px;
 }
 
 .link-underline {
@@ -46,6 +51,13 @@ ul {
 #scroll ul {
   height: calc(100% - 101px);
   overflow-y: scroll;
+  max-width: 390px;
+}
+
+#scroll ul li {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 ::-webkit-scrollbar {
@@ -60,22 +72,6 @@ ul {
   background-color: #4d4d4d;
 }
 
-.page {
-  display: flex;
-}
-.library {
-  min-width: 380px;
-  background-color: black;
-  height: 100vh;
-}
-.main-content {
-  flex-grow: 7;
-  background-color: red;
-}
-.activities {
-  min-width: 270px;
-  background-color: black;
-}
 .background-main {
   background-color: #181818;
 }
@@ -113,14 +109,11 @@ ul {
 /* FRIENDS ACTIVITIES */
 .activities {
   color: #b2b2b2;
+  min-width: 270px;
+  background-color: black;
 }
 
-.activities ul li > i {
-  font-size: 11px;
-  text-align: center;
-  vertical-align: middle;
-}
-.activities .row i {
+.activities i {
   font-size: 17px;
 }
 
@@ -167,8 +160,10 @@ ul {
 /* ALBUM.HTML  */
 
 .album {
-  height: calc(100% - 100px);
+  height: calc(100%-101px);
+  flex-grow: 1;
   overflow-y: auto;
+
   background: rgb(226, 196, 80);
   background: linear-gradient(
     180deg,
@@ -221,6 +216,7 @@ ul {
 
 .album main {
   background-color: #181818;
+  height: 100%;
 }
 .album-song {
   counter-increment: myCounter 1;
