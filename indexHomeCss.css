@@ -61,7 +61,7 @@ ul {
 #scroll ul {
   height: calc(100% - 101px);
   overflow-y: scroll;
-  max-width: 390px;
+  max-width: 360px;
 }
 
 #scroll ul li {
@@ -360,9 +360,6 @@ ul {
 
 /* HOMEPAGE CLASSES */
 
-.homepage {
-}
-
 .scroll {
   height: calc(100% - 116px);
   overflow-y: auto;
@@ -399,11 +396,7 @@ ul {
 }
 
 .featured-bg {
-  background: radial-gradient(
-    ellipse at 96% 0%,
-    rgba(33, 33, 33, 1) 30%,
-    rgba(7, 7, 7, 1) 65%
-  );
+  background: radial-gradient(ellipse at 96% 0%, rgba(33, 33, 33, 1) 30%, rgba(7, 7, 7, 1) 65%);
 }
 .featured-btn-play {
   background-color: #1ed760;
@@ -441,7 +434,10 @@ ul {
   border-radius: 5px;
   overflow: hidden;
 }
-
+.album-font {
+  font-size: 17px;
+  font-weight: 600;
+}
 .font-smaller {
   font-size: 11px;
 }
