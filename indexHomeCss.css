@@ -60,7 +60,8 @@ ul {
 #scroll ul {
   height: calc(100% - 101px);
   overflow-y: scroll;
-  max-width: 360px;
+
+  min-width: 360px;
   margin-top: 15px;
 }
 
@@ -227,7 +228,8 @@ ul {
 
 .album main {
   background-color: #181818;
-  height: 100%;
+
+  min-height: 100%;
 }
 .album-song {
   counter-increment: myCounter 1;
@@ -356,7 +358,10 @@ ul {
   height: calc(100% - 101px);
   overflow-y: auto;
 }
-
+.title-feature {
+  font-size: 4rem;
+  text-transform: uppercase;
+}
 .arrow-top {
   background-color: #131313;
   text-align: center;
