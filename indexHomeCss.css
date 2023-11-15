@@ -142,8 +142,9 @@ ul {
   object-fit: cover;
 }
 .feed-text h6 {
+  font-size: 0.9em;
   margin-bottom: 0;
-  font-weight: 600;
+  font-weight: 900;
 }
 
 .feed-text p {
@@ -396,11 +397,7 @@ ul {
 }
 
 .featured-bg {
-  background: radial-gradient(
-    ellipse at 96% 0%,
-    rgba(33, 33, 33, 1) 30%,
-    rgba(7, 7, 7, 1) 65%
-  );
+  background: radial-gradient(ellipse at 96% 0%, rgba(33, 33, 33, 1) 30%, rgba(7, 7, 7, 1) 65%);
 }
 .featured-btn-play {
   background-color: #1ed760;
