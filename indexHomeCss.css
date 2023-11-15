@@ -4,11 +4,21 @@
   box-sizing: border-box;
   font-family: "Circular";
 }
+body {
+  display: flex;
+}
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
 
 #left-sidebar {
   display: flex;
   flex-direction: column;
+  align-items: start;
   padding-right: 2px;
+  min-width: 320px;
 }
 
 .link-underline {
@@ -38,8 +48,16 @@
   flex-grow: 1;
 }
 
-#scroll ul.nav {
+#scroll ul {
+  height: calc(100% - 101px);
   overflow-y: scroll;
+  max-width: 390px;
+}
+
+#scroll ul li {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 ::-webkit-scrollbar {
@@ -54,22 +72,6 @@
   background-color: #4d4d4d;
 }
 
-.page {
-  display: flex;
-}
-.library {
-  min-width: 380px;
-  background-color: black;
-  height: 100vh;
-}
-.main-content {
-  flex-grow: 7;
-  background-color: red;
-}
-.activities {
-  min-width: 270px;
-  background-color: black;
-}
 .background-main {
   background-color: #181818;
 }
@@ -89,16 +91,29 @@
   color: rgb(197, 195, 195);
 }
 
-.activities {
-  color: #b2b2b2;
+.active-player-icons {
+  color: #1b8440;
+  position: relative;
+}
+.icon-dot {
+  background-color: #1b8440;
+  position: absolute;
+  bottom: -3px;
+  right: 50%;
+
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
 }
 
-.activities ul li > i {
-  font-size: 11px;
-  text-align: center;
-  vertical-align: middle;
+/* FRIENDS ACTIVITIES */
+.activities {
+  color: #b2b2b2;
+  min-width: 270px;
+  background-color: black;
 }
-.activities .row i {
+
+.activities i {
   font-size: 17px;
 }
 
@@ -139,7 +154,94 @@
 }
 
 .feed-time {
-  font-size: 0.7rem;
+  font-size: 0.75rem;
+}
+
+/* ALBUM.HTML  */
+
+.album {
+  height: calc(100%-101px);
+  flex-grow: 1;
+  overflow-y: auto;
+
+  background: rgb(226, 196, 80);
+  background: linear-gradient(
+    180deg,
+    rgba(226, 196, 80, 0.958420868347339) 0%,
+    rgba(89, 78, 39, 0.9360119047619048) 35%,
+    rgba(18, 18, 18, 1) 53%
+  );
+}
+
+.album-img {
+  width: 250px;
+  height: 250px;
+  box-shadow: 0px 0px 30px 13px #0000;
+}
+.album-img > img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.album-desc h6 {
+  font-size: 13px;
+  font-weight: 700;
+}
+.album-desc h1 {
+  font-size: 6.5rem;
+  letter-spacing: -6px;
+  font-weight: 800;
+}
+.album-desc p {
+  font-size: 15px;
+}
+.album-desc span:first-of-type {
+  font-weight: 600;
+}
+
+.album-desc span:last-of-type {
+  opacity: 50%;
+}
+.artist-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.artist-icon img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.album main {
+  background-color: #181818;
+  height: 100%;
+}
+.album-song {
+  counter-increment: myCounter 1;
+}
+.album-song::before {
+  content: counter(myCounter);
+  font-size: 1.3rem;
+  transform: translateY(9px);
+  min-width: 20px;
+}
+#album-songs-top::before {
+  content: "#";
+  font-size: 1.3rem;
+}
+#album-songs-top i {
+  font-size: 1.3rem;
+}
+
+.song-title {
+  font-size: 19px;
+  color: rgb(223, 219, 219);
+  margin: 0;
+}
+.song-artist {
+  color: #8f8d8d;
 }
 
 /*ARTIST PAGE CSS:*/
