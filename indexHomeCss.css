@@ -365,8 +365,8 @@ ul {
   background: linear-gradient(
     180deg,
     rgba(42, 42, 41, 0.958) 0%,
-    rgba(29, 29, 29, 0.936) 35%,
-    rgb(18, 18, 18, 0.961) 53%
+    rgba(25, 25, 25, 0.936) 35%,
+    rgba(4, 4, 4, 0.961) 53%
   );
   color: #b2b2b2;
   flex-grow: 1;
@@ -522,7 +522,11 @@ ul {
 }
 
 .featured-bg {
-  background: radial-gradient(ellipse at 96% 0%, rgba(33, 33, 33, 1) 30%, rgba(7, 7, 7, 1) 65%);
+  background: radial-gradient(
+    ellipse at 96% 0%,
+    rgba(33, 33, 33, 1) 30%,
+    rgba(7, 7, 7, 1) 65%
+  );
 }
 .featured-btn-play {
   background-color: #1ed760;
@@ -604,4 +608,21 @@ ul {
   .album-font {
     font-size: 10px;
   }
+}
+/*MEDIA QUERIES ARTIST PAGE:*/
+
+.artist-playlist-mobile button {
+  background: linear-gradient(
+    180deg,
+    rgba(34, 34, 34, 0.958) 0%,
+    rgba(25, 25, 25, 0.936) 35%
+  );
+  color: rgb(238, 236, 236);
+  font-size: 15px;
+  font-weight: 500;
+  border: 0.1px solid #242323;
+  border-radius: 4px;
+  padding: 4px;
+  padding-left: 12px;
+  padding-right: 12px;
 }
