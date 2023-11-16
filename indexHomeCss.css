@@ -289,16 +289,9 @@ ul {
   min-height: 100%;
   color: #a8a8a8;
 }
-.artist-playlist + div {
-  font-size: 13px;
-  position: sticky;
-  top: 53px;
-  font-weight: 600;
-  letter-spacing: 1px;
-}
+
 .album-song {
   font-size: 14px;
-
   counter-increment: myCounter 1;
 }
 .album-song::before {
@@ -310,6 +303,13 @@ ul {
 
 .album-song p + p {
   margin: 0;
+}
+#album-songs-top {
+  position: sticky;
+  top: 53px;
+  font-size: 12px;
+  letter-spacing: 1px;
+  font-weight: 500;
 }
 
 #album-songs-top::before {
