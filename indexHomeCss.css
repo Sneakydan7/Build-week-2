@@ -289,6 +289,20 @@ ul {
   min-height: 100%;
   color: #a8a8a8;
 }
+@media screen and (max-width: 576px) {
+  .album {
+    background: linear-gradient(
+      180deg,
+      rgba(214, 183, 56, 0.781) 0px,
+      rgba(89, 78, 39, 0.9360119047619048) 320px,
+      rgba(18, 18, 18, 1) 520px
+    );
+    background-attachment: local;
+  }
+  .album main {
+    background-color: transparent;
+  }
+}
 
 .album-song {
   font-size: 14px;
@@ -299,6 +313,11 @@ ul {
   font-size: 1.3rem;
   transform: translateY(9px);
   min-width: 20px;
+}
+@media screen and (max-width: 576px) {
+  .album-song::before {
+    display: none;
+  }
 }
 
 .album-song p + p {
@@ -312,6 +331,11 @@ ul {
   font-weight: 500;
 }
 
+@media screen and (max-width: 576px) {
+  #album-songs-top {
+    display: none;
+  }
+}
 #album-songs-top::before {
   content: "#";
   font-size: 1.3rem;
