@@ -372,6 +372,18 @@ ul {
 .song-title + p {
   letter-spacing: 0;
 }
+
+.image {
+  padding: 10px;
+}
+.image > img {
+  border-radius: 5px;
+}
+.album .card a {
+  text-decoration: none;
+  color: white;
+}
+
 /*ARTIST PAGE CSS:*/
 #central-page {
   background: linear-gradient(

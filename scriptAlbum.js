@@ -1,6 +1,6 @@
 const params = new URLSearchParams(window.location.search);
-const itemId = params.get("_id");
-const URL = "https://deezerdevs-deezer.p.rapidapi.com/album/" + itemId;
+const albumId = params.get("_id");
+const URL = "https://deezerdevs-deezer.p.rapidapi.com/album/" + albumId;
 
 function playSong(songName, artistName, img, duration) {
   let song = document.getElementById("player-song-name");
@@ -23,6 +23,7 @@ function playSong(songName, artistName, img, duration) {
 }
 
 window.addEventListener("DOMContentLoaded", () => {
+  // ALBUM CREATION
   fetch(URL, {
     method: "GET",
     headers: {
@@ -123,6 +124,75 @@ window.addEventListener("DOMContentLoaded", () => {
 
       document.querySelector(".album main .container-fluid + div").innerText = albumObj.release_date;
       document.querySelector(".show-interests div").innerText = `Altro da ${albumObj.artist.name}`;
+
+      // ALBUM CARDS CREATION
+
+      let artistName = albumObj.artist.name;
+      let lowerCaseName = artistName.toLowerCase();
+      let splitName = lowerCaseName.split(" ");
+      let joinedName = splitName.join("-");
+
+      const cardsURL = "https://deezerdevs-deezer.p.rapidapi.com/search?q=" + joinedName;
+      fetch(cardsURL, {
+        method: "GET",
+        headers: {
+          "X-RapidAPI-Key": "324d031408msh0f6aa06c1f35eb0p17c00fjsne3d27a65a55b",
+          "X-RapidAPI-Host": "deezerdevs-deezer.p.rapidapi.com",
+        },
+      })
+        .then((resp) => {
+          if (!resp) {
+            throw new Error();
+          }
+          return resp.json();
+        })
+        .then((artistObj) => {
+          let arrayForCards = artistObj.data.slice(0, 6);
+          console.log(arrayForCards);
+          const cardsRow = document.getElementsByClassName("row-cols-1")[0];
+          arrayForCards.forEach((element) => {
+            const cardCol = document.createElement("div");
+            cardCol.classList.add("col");
+
+            const card = document.createElement("div");
+            card.classList.add("card", "card-bg");
+
+            const imgDiv = document.createElement("div");
+            imgDiv.classList.add("image");
+
+            const cardImg = document.createElement("img");
+            cardImg.classList.add("card-img-top");
+            cardImg.src = element.album.cover_medium;
+
+            imgDiv.appendChild(cardImg);
+            card.appendChild(imgDiv);
+
+            const cardBody = document.createElement("div");
+            cardBody.classList.add("card-body");
+
+            const cardBodyH5 = document.createElement("h5");
+            cardBodyH5.classList.add("card-title", "text-white", "text-truncate");
+
+            const cardTitleAnchor = document.createElement("a");
+            cardTitleAnchor.classList.add("fs-5");
+            cardTitleAnchor.innerText = element.album.title;
+            cardTitleAnchor.href = `./album.html?_id=${element.album.id}`;
+            cardBodyH5.appendChild(cardTitleAnchor);
+
+            cardBody.appendChild(cardBodyH5);
+
+            const cardBodyP = document.createElement("p");
+            cardBodyP.classList.add("card-text", "text-grey");
+            cardBodyP.innerText = albumObj.release_date.slice(0, 4);
+            cardBody.appendChild(cardBodyP);
+
+            card.appendChild(cardBody);
+
+            cardCol.appendChild(card);
+            cardsRow.appendChild(cardCol);
+          });
+        })
+        .catch((error) => Error(error));
     })
     .catch((error) => Error(error));
 });
