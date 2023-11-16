@@ -626,3 +626,12 @@ ul {
   padding-left: 12px;
   padding-right: 12px;
 }
+
+/* SEARCH PAGE */
+
+.search-bar {
+  background-color: #282828;
+  width: 500px;
+  padding: 13px;
+  border-radius: 99em;
+}
