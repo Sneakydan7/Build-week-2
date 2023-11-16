@@ -196,7 +196,7 @@ ul {
     180deg,
     rgba(214, 183, 56, 0.781) 0px,
     rgba(89, 78, 39, 0.9360119047619048) 450px,
-    rgba(18, 18, 18, 1) 660px
+    rgba(18, 18, 18, 1) 640px
   );
   background-attachment: local;
 }
@@ -216,10 +216,39 @@ ul {
   font-weight: 700;
 }
 .album-desc h1 {
-  font-size: 6.5rem;
-  letter-spacing: -6px;
+  font-size: 2.5rem;
   font-weight: 800;
+  letter-spacing: -2px;
 }
+@media screen and (min-width: 768px) {
+  .album-desc h1 {
+    font-size: 4.5rem;
+    letter-spacing: -2px;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .album-desc h1 {
+    font-size: 3.5rem;
+    letter-spacing: -2px;
+  }
+}
+@media screen and (min-width: 1359px) {
+  .album-desc h1 {
+    font-size: 4rem;
+  }
+}
+@media screen and (min-width: 1559px) {
+  .album-desc h1 {
+    font-size: 5rem;
+  }
+}
+@media screen and (min-width: 1759px) {
+  .album-desc h1 {
+    font-size: 6.2rem;
+    letter-spacing: -6px;
+  }
+}
+
 .album-desc p {
   font-size: 15px;
 }
@@ -245,21 +274,31 @@ ul {
   width: 100%;
   object-fit: cover;
 }
+
 .artist-playlist .fa-play-circle {
   color: #4dd458;
   font-size: 60px;
 }
-.artist-playlist .bi-three-dots {
+.artist-playlist i {
   color: #b2b2b2;
-  font-size: 37px;
+  font-size: 33px;
 }
 
 .album main {
   background-color: #1818182b;
   min-height: 100%;
-  color: #b2b2b2;
+  color: #a8a8a8;
+}
+.artist-playlist + div {
+  font-size: 13px;
+  position: sticky;
+  top: 53px;
+  font-weight: 600;
+  letter-spacing: 1px;
 }
 .album-song {
+  font-size: 14px;
+
   counter-increment: myCounter 1;
 }
 .album-song::before {
@@ -268,6 +307,11 @@ ul {
   transform: translateY(9px);
   min-width: 20px;
 }
+
+.album-song p + p {
+  margin: 0;
+}
+
 #album-songs-top::before {
   content: "#";
   font-size: 1.3rem;
@@ -277,11 +321,15 @@ ul {
 }
 
 .song-title {
-  font-size: 19px;
-  color: rgb(223, 219, 219);
-  margin: 0;
+  font-size: 18px;
+  color: rgb(235, 232, 232);
+  margin-bottom: 2px;
+  letter-spacing: 0;
+  font-weight: 500;
 }
-
+.song-title + p {
+  letter-spacing: 0;
+}
 /*ARTIST PAGE CSS:*/
 #central-page {
   background: linear-gradient(
