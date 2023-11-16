@@ -365,15 +365,17 @@ ul {
   background: linear-gradient(
     180deg,
     rgba(42, 42, 41, 0.958) 0%,
-    rgba(25, 25, 25, 0.936) 35%,
-    rgba(4, 4, 4, 0.961) 53%
+    rgba(25, 25, 25, 0.936) 290px,
+    rgba(4, 4, 4, 0.961) 533px
   );
+  background-attachment: local;
   color: #b2b2b2;
   flex-grow: 1;
+  overflow-y: auto;
+  height: calc(100% - 101px);
 }
 
 .artist-cover {
-  background-image: url(https://therockrevival.com/wp-content/uploads/2023/02/308707431_623756372436903_6197440860849993096_n-1024x683.jpg);
   height: 380px;
   object-fit: cover;
   background-size: 100%;

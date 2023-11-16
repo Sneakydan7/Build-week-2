@@ -175,47 +175,10 @@
               <div
                 class="popular-playlist-songs"
                 style="counter-reset: my-sec-counter"
-              >
-                <div
-                  class="row popular-songs-list pt-1 ms-1 ms-lg-4 mt-4 d-flex align-items-center"
-                >
-                  <div class="col-5 mx-1 d-flex align-items-center">
-                    <img
-                      src="./assets/imgs/search/image-16.jpg"
-                      alt=""
-                      style="width: 35px"
-                    />
-                    <p class="m-1 p-2">Ocean Avenue</p>
-                  </div>
-                  <div class="col-3 text-end">
-                    <p class="m-1 p-2">276.616.912</p>
-                  </div>
-                  <div class="col-3 text-end flex-grow-1">
-                    <p class="m-1 p-2">3:18</p>
-                  </div>
-                </div>
-                <div
-                  class="row ms-1 ms-lg-4 pt-1 popular-songs-list d-flex align-items-center"
-                >
-                  <div class="col-5 mx-1 d-flex align-items-center">
-                    <img
-                      src="./assets/imgs/search/image-16.jpg"
-                      alt=""
-                      style="width: 35px"
-                    />
-                    <p class="m-1 px-2">Ocean Avenue</p>
-                  </div>
-                  <div class="col-3 text-end">
-                    <p class="m-1 px-2">276.616.912</p>
-                  </div>
-                  <div class="col-3 text-end flex-grow-1">
-                    <p class="m-1 px-2">3:18</p>
-                  </div>
-                </div>
-              </div>
+              ></div>
               <span class="fw-bold m-4 show-more">VISUALIZZA ALTRO</span>
             </div>
-            <div class="col-5 d-none d-md-flex" id="artist-liked-songs">
+            <div class="col-5 d-none d-md-block" id="artist-liked-songs">
               <h5 class="fw-bold text-white mb-4">Brani che ti piacciono</h5>
 
               <div class="artist-badge-heart d-flex align-items-center">
@@ -302,7 +265,7 @@
     </div>
 
     <div
-      class="player container-fluid d-flex fixed-bottom background-main d-flex align-items-center justify-content-between px-3 py-2 border-top border-secondary border-opacity-10"
+      class="player container-fluid d-flex fixed-bottom background-main d-flex align-items-center justify-content-between px-3 py-2 border-top border-secondary border-opacity-25"
     >
       <div class="song-current d-flex align-items-center">
         <div class="image">
@@ -310,14 +273,22 @@
             src="./assets/imgs/search/image-12.jpg"
             alt=""
             style="width: 60px"
+            id="player-img"
           />
         </div>
         <div class="text-area px-3">
-          <p class="text-white text-truncate m-0">Fat Funny Friend</p>
-          <p class="text-secondary text-truncate m-0 feed-time">Maddie Zahm</p>
+          <p class="text-white text-truncate m-0" id="player-song-name">
+            Fat Funny Friend
+          </p>
+          <p
+            class="text-secondary text-truncate m-0 feed-time"
+            id="player-artist-name"
+          >
+            Maddie Zahm
+          </p>
         </div>
         <div class="heart px-3">
-          <i class="far fa-heart text-secondary"></i>
+          <i class="far fa-heart text-white"></i>
         </div>
       </div>
       <div
@@ -347,10 +318,10 @@
             id="timeline "
             class="d-flex align-items-center justify-content-center"
           >
-            <span id="current-time">--:--</span>
+            <span id="current-time" class="text-white pe-1">00:00</span>
 
-            <input type="range" class="slider" id="customRange1" />
-            <span id="total-time">--:--</span>
+            <input type="range" class="slider slider-song" id="customRange1" />
+            <span id="total-time" class="text-white ps-1">--:--</span>
           </div>
         </div>
       </div>
@@ -363,7 +334,7 @@
         ></a>
         <a href="#" class="me-2"><i class="fas fa-fax icon-color"></i></a>
         <a href="#"><i class="fas fa-volume-up me-2 icon-color"></i></a>
-        <input type="range" class="form-range me-2" id="customRange1" />
+        <input type="range" class="slider slider-vol me-2" id="customRange1" />
         <a href="#"><i class="fas fa-expand-alt me-2 icon-color"></i></a>
       </div>
     </div>
