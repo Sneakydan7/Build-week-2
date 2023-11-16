@@ -105,7 +105,7 @@ window.onload = () => {
       </div>
       <div class="card-body ">
         <h5 class="card-title text-white"><a class= " link-pointer link-light link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover" href="./artistPage.html?_id=${song.artist.id}">${song.artist.name}</a></h5>
-        <p class="card-text text-grey">Ascolta l'album</p>
+        <p class="card-text text-grey">Scopri l'artista</p>
       </div>
     </div>`;
 
@@ -135,7 +135,7 @@ window.onload = () => {
       </div>
       <div class="card-body">
         <h5 class="card-title text-white"><a class= " link-pointer link-light link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover" href="./artistPage.html?_id=${song.artist.id}">${song.artist.name}</a></h5>
-        <p class="card-text text-grey">Ascolta l'album</p>
+        <p class="card-text text-grey">Scopri l'artista</p>
       </div>
     </div>`;
 
@@ -165,7 +165,7 @@ window.onload = () => {
       </div>
       <div class="card-body">
         <h5 class="card-title text-white"><a class= " link-pointer link-light link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover" href="./artistPage.html?_id=${song.album.id}">${song.artist.name}</a></h5>
-        <p class="card-text text-grey">Ascolta l'album</p>
+        <p class="card-text text-grey">Scopri l'artista</p>
       </div>
     </div>`;
 
@@ -194,7 +194,7 @@ window.onload = () => {
       </div>
       <div class="card-body">
         <h5 class="card-title text-white"><a class= " link-pointer link-light link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover" href="./artistPage.html?_id=${song.artist.id}">${song.artist.name}</a></h5>
-        <p class="card-text text-grey">Ascolta l'album</p>
+        <p class="card-text text-grey">Scopri l'artista</p>
       </div>
     </div>`;
 
@@ -223,7 +223,7 @@ window.onload = () => {
       </div>
       <div class="card-body">
         <h5 class="card-title text-white"><a class= " link-pointer link-light link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover" href="./artistPage.html?_id=${song.artist.id}">${song.artist.name}</a></h5>
-        <p class="card-text text-grey">Ascolta l'album</p>
+        <p class="card-text text-grey">Scopri l'artista</p>
       </div>
     </div>`;
 
