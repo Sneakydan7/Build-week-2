@@ -311,13 +311,15 @@ ul {
 }
 
 .album-song {
-  font-size: 14px;
   counter-increment: myCounter 1;
+  border-radius: 8px;
+}
+.album-song:hover {
+  background-color: rgba(83, 82, 82, 0.329);
 }
 .album-song::before {
   content: counter(myCounter);
   font-size: 1.3rem;
-  transform: translateY(9px);
   min-width: 20px;
 }
 @media screen and (max-width: 576px) {
@@ -329,10 +331,15 @@ ul {
 .album-song p + p {
   margin: 0;
 }
+.album-song a {
+  text-decoration: none;
+  color: #a8a8a8;
+}
+
 #album-songs-top {
   position: sticky;
   top: 53px;
-  font-size: 12px;
+  font-size: 14px;
   letter-spacing: 1px;
   font-weight: 500;
 }
@@ -522,11 +529,7 @@ ul {
 }
 
 .featured-bg {
-  background: radial-gradient(
-    ellipse at 96% 0%,
-    rgba(33, 33, 33, 1) 30%,
-    rgba(7, 7, 7, 1) 65%
-  );
+  background: radial-gradient(ellipse at 96% 0%, rgba(33, 33, 33, 1) 30%, rgba(7, 7, 7, 1) 65%);
 }
 .featured-btn-play {
   background-color: #1ed760;
@@ -612,11 +615,7 @@ ul {
 /*MEDIA QUERIES ARTIST PAGE:*/
 
 .artist-playlist-mobile button {
-  background: linear-gradient(
-    180deg,
-    rgba(34, 34, 34, 0.958) 0%,
-    rgba(25, 25, 25, 0.936) 35%
-  );
+  background: linear-gradient(180deg, rgba(34, 34, 34, 0.958) 0%, rgba(25, 25, 25, 0.936) 35%);
   color: rgb(238, 236, 236);
   font-size: 15px;
   font-weight: 500;
