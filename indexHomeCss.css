@@ -14,6 +14,23 @@ ul {
   margin: 0;
 }
 
+.dropdown-toggle::after {
+  margin-left: 15px;
+  border-top: 0.5em solid;
+  border-right: 0.5em solid transparent;
+
+  border-left: 0.5em solid transparent;
+}
+.navigation .dropdown div {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.navigation .dropdown div img {
+  width: 100%;
+  object-fit: cover;
+}
 .options > ul {
   min-width: 350px;
 }
@@ -174,14 +191,14 @@ ul {
   height: calc(100% - 101px);
   flex-grow: 1;
   overflow-y: auto;
-
   background: rgb(226, 196, 80);
   background: linear-gradient(
     180deg,
-    rgba(226, 196, 80, 0.958420868347339) 0%,
-    rgba(89, 78, 39, 0.9360119047619048) 35%,
-    rgba(18, 18, 18, 1) 53%
+    rgba(214, 183, 56, 0.781) 0px,
+    rgba(89, 78, 39, 0.9360119047619048) 450px,
+    rgba(18, 18, 18, 1) 660px
   );
+  background-attachment: local;
 }
 
 .album-img {
@@ -213,6 +230,10 @@ ul {
 .album-desc span:last-of-type {
   opacity: 50%;
 }
+.album-desc a {
+  text-decoration: none;
+  color: white;
+}
 .artist-icon {
   width: 28px;
   height: 28px;
@@ -224,11 +245,19 @@ ul {
   width: 100%;
   object-fit: cover;
 }
+.artist-playlist .fa-play-circle {
+  color: #4dd458;
+  font-size: 60px;
+}
+.artist-playlist .bi-three-dots {
+  color: #b2b2b2;
+  font-size: 37px;
+}
 
 .album main {
-  background-color: #181818;
-
+  background-color: #1818182b;
   min-height: 100%;
+  color: #b2b2b2;
 }
 .album-song {
   counter-increment: myCounter 1;
@@ -251,9 +280,6 @@ ul {
   font-size: 19px;
   color: rgb(223, 219, 219);
   margin: 0;
-}
-.song-artist {
-  color: #8f8d8d;
 }
 
 /*ARTIST PAGE CSS:*/
