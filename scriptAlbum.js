@@ -44,6 +44,8 @@ window.addEventListener("DOMContentLoaded", () => {
 
       document.querySelector(".album-desc a").innerText = albumObj.artist.name;
       document.querySelector(".album-desc a").href = `./artistPage.html?_id=${albumObj.artist.id}`;
+      document.querySelector(".album-desc a").innerText = albumObj.artist.name;
+      document.querySelector(".album-desc a").href = `./artistPage.html?_id=${albumObj.artist.id}`;
 
       const releaseYear = albumObj.release_date.slice(0, 4);
       document.querySelector(

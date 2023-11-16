@@ -153,6 +153,7 @@ window.onload = () => {
     })
     .then((songsObj) => {
       let song = songsObj.data[0];
+      let song2 = songsObj.data[1];
       let card4 = document.getElementById("card4");
       card4.innerHTML = `<div class="card card-bg">
       <div class="image" style="padding: 10px">
@@ -168,6 +169,12 @@ window.onload = () => {
         <p class="card-text text-grey">Scopri l'artista</p>
       </div>
     </div>`;
+
+      let album5 = document.getElementById("album5");
+      album5.innerHTML = `<span class="text-white album-font"> <a class= " link-pointer link-light link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover" href="./album.html?_id=${song2.album.id}"> ${song2.album.title}</a> </span>`;
+      console.log(song2.album);
+      let album5Img = document.getElementById("album5-img");
+      album5Img.src = song2.album.cover_medium;
 
       songsObj.data
         .forEach((e) => {
@@ -198,6 +205,12 @@ window.onload = () => {
       </div>
     </div>`;
 
+      let album2 = document.getElementById("album2");
+      album2.innerHTML = `<span class="text-white album-font"> <a class= " link-pointer link-light link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover" href="./album.html?_id=${song.album.id}">${song.album.title}</a> </span>`;
+      console.log(song.album);
+      let album2Img = document.getElementById("album2-img");
+      album2Img.src = song.album.cover_medium;
+
       songsObj.data
         .forEach((e) => {
           songsArray.push(e);
@@ -226,6 +239,12 @@ window.onload = () => {
         <p class="card-text text-grey">Scopri l'artista</p>
       </div>
     </div>`;
+
+      let album3 = document.getElementById("album3");
+      album3.innerHTML = `<span class="text-white album-font"> <a class= " link-pointer link-light link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover" href="./album.html?_id=${song.album.id}"> ${song.album.title}</a> </span>`;
+      console.log(song.album);
+      let album3Img = document.getElementById("album3-img");
+      album3Img.src = song.album.cover_medium;
 
       songsObj.data
         .forEach((e) => {
