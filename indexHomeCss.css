@@ -259,8 +259,8 @@ ul {
   background: linear-gradient(
     180deg,
     rgba(42, 42, 41, 0.958) 0%,
-    rgba(29, 29, 29, 0.936) 35%,
-    rgb(18, 18, 18, 0.961) 53%
+    rgba(25, 25, 25, 0.936) 35%,
+    rgba(4, 4, 4, 0.961) 53%
   );
   color: #b2b2b2;
   flex-grow: 1;
@@ -449,4 +449,22 @@ ul {
   border: none;
   outline: none;
   box-shadow: none;
+}
+
+/*MEDIA QUERIES ARTIST PAGE:*/
+
+.artist-playlist-mobile button {
+  background: linear-gradient(
+    180deg,
+    rgba(34, 34, 34, 0.958) 0%,
+    rgba(25, 25, 25, 0.936) 35%
+  );
+  color: rgb(238, 236, 236);
+  font-size: 15px;
+  font-weight: 500;
+  border: 0.1px solid #242323;
+  border-radius: 4px;
+  padding: 4px;
+  padding-left: 12px;
+  padding-right: 12px;
 }

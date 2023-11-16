@@ -144,12 +144,17 @@
       >
         <div class="navigation w-100 d-flex mb-auto mt-3 sticky-top">
           <div class="arrow-left arrow-top">
-            <a href="#"><i class="fas fa-chevron-left text-grey"></i> </a>
+            <a href="#"
+              ><i
+                class="fas fa-chevron-left text-grey d-none d-md-inline-block"
+              ></i>
+            </a>
+            <a href="#"><i class="bi bi-arrow-left text-grey d-md-none"></i></a>
           </div>
           <div class="arrow-right arrow-top me-auto">
             <a href="#"><i class="fas fa-chevron-right text-grey"></i> </a>
           </div>
-          <div class="dropdown">
+          <div class="dropdown d-none d-md-flex">
             <button
               class="btn btn-custom dropdown-toggle text-truncate text-white"
               type="button"
@@ -170,19 +175,45 @@
           </div>
         </div>
         <div class="artist-info ms-4 mb-2">
-          <div class="artist-verified d-flex align-items-center">
+          <div class="artist-verified d-none d-md-flex align-items-center">
             <i class="bi bi-patch-check-fill"></i>
             <span class="mx-2">Artista verificato</span>
           </div>
           <div class="artist-cover-title text-white fw-bold mb-2">
             Yellowcard
           </div>
-          <div class="artist-listeners">3.433.158 ascoltatori mensili</div>
+          <div class="artist-listeners d-none d-md-flex">
+            3.433.158 ascoltatori mensili
+          </div>
         </div>
       </div>
 
       <div class="artist-playlist-container">
-        <div class="artist-playlist p-4 d-flex align-items-center">
+        <div class="artist-listeners fs-6 mx-4 mt-4 d-md-none">
+          3.433.158 ascoltatori mensili
+        </div>
+        <div
+          class="artist-playlist-container-mobile d-flex justify-content-between d-md-none"
+        >
+          <div class="artist-playlist-mobile d-flex align-items-center">
+            <a href="" class="m-4"><button type="button">Seguiti</button></a>
+            <a href=""
+              ><i class="bi bi-three-dots-vertical p-3 fs-3 text-grey"></i
+            ></a>
+          </div>
+          <div class="playlist-btn-mobile d-flex align-items-center">
+            <a href=""
+              ><div class="icon-dot"></div>
+              <i
+                class="bi bi-shuffle"
+                style="color: #4dd458; font-size: 30px"
+              ></i
+            ></a>
+          </div>
+        </div>
+        <div
+          class="artist-playlist p-4 d-flex align-items-center d-none d-md-flex"
+        >
           <a href="" class=""
             ><i
               class="fas fa-play-circle"
@@ -203,7 +234,7 @@
                 style="counter-reset: my-sec-counter"
               >
                 <div
-                  class="row popular-songs-list pt-1 ms-4 mt-4 d-flex align-items-center"
+                  class="row popular-songs-list pt-1 ms-1 ms-lg-4 mt-4 d-flex align-items-center"
                 >
                   <div class="col-5 mx-1 d-flex align-items-center">
                     <img
@@ -221,7 +252,7 @@
                   </div>
                 </div>
                 <div
-                  class="row ms-4 pt-1 popular-songs-list d-flex align-items-center"
+                  class="row ms-1 ms-lg-4 pt-1 popular-songs-list d-flex align-items-center"
                 >
                   <div class="col-5 mx-1 d-flex align-items-center">
                     <img
@@ -241,7 +272,7 @@
               </div>
               <span class="fw-bold m-4 show-more">VISUALIZZA ALTRO</span>
             </div>
-            <div class="col-5" id="artist-liked-songs">
+            <div class="col-5 d-none d-md-flex" id="artist-liked-songs">
               <h5 class="fw-bold text-white mb-4">Brani che ti piacciono</h5>
 
               <div class="artist-badge-heart d-flex align-items-center">
@@ -269,7 +300,7 @@
       </div>
     </div>
     <!-- ACTIVITIES -->
-    <div class="activities">
+    <div class="activities d-none d-xl-block">
       <div class="container ps-2 pe-0">
         <div class="d-flex align-items-baseline my-5">
           <h5 class="amici text-white flex-grow-1">Attività amici</h5>
@@ -393,5 +424,6 @@
         <a href="#"><i class="fas fa-expand-alt me-2 icon-color"></i></a>
       </div>
     </div>
+    <script src="./scriptArtist.js"></script>
   </body>
 </html>
