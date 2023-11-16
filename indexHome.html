@@ -80,7 +80,9 @@
       </div>
     </div>
     <div class="homepage homepage-bg px-4 scroll position-relative">
-      <div class="navigation d-flex align-items-middle sticky-top w-100 mt-3">
+      <div
+        class="navigation d-flex align-items-middle sticky-top w-100 mt-3 d-none d-md-flex"
+      >
         <div class="arrow-left arrow-top">
           <a href="#"><i class="fas fa-chevron-left text-grey"></i> </a>
         </div>
@@ -122,7 +124,7 @@
       <div class="container">
         <div class="row">
           <div class="col-6 col-xxl-4 mt-2 ps-0">
-            <div class="playlist-bg">
+            <div class="playlist-bg" id="playlists">
               <div
                 class="playlist-square d-inline-block align-middle"
                 style="height: 70px; width: 70px; font-size: 0px"
@@ -375,7 +377,7 @@
           </div>
         </div>
       </div>
-      <div class="show-interests d-flex align-items-center mt-3">
+      <div class="show-interests align-items-center mt-3 d-none d-md-flex">
         <div class="h4 text-white mt-2 fw-bold me-auto">
           Altro di ciò che ti piace
         </div>
@@ -386,7 +388,7 @@
       <div
         class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xxl-5 justify-content-between g-3 mt-1"
       >
-        <div class="col">
+        <div class="col" id="card1">
           <div class="card card-bg">
             <div class="image" style="padding: 10px">
               <img
@@ -402,7 +404,7 @@
             </div>
           </div>
         </div>
-        <div class="col">
+        <div class="col" id="card2">
           <div class="card card-bg">
             <div class="image" style="padding: 10px">
               <img
@@ -418,7 +420,7 @@
             </div>
           </div>
         </div>
-        <div class="col">
+        <div class="col" id="card3">
           <div class="card card-bg">
             <div class="image" style="padding: 10px">
               <img
@@ -434,7 +436,7 @@
             </div>
           </div>
         </div>
-        <div class="col">
+        <div class="col" id="card4">
           <div class="card card-bg">
             <div class="image" style="padding: 10px">
               <img
@@ -450,7 +452,7 @@
             </div>
           </div>
         </div>
-        <div class="col">
+        <div class="col" id="card5">
           <div class="card card-bg">
             <div class="image" style="padding: 10px">
               <img
@@ -535,11 +537,19 @@
             src="./assets/imgs/search/image-12.jpg"
             alt=""
             style="width: 60px"
+            id="player-img"
           />
         </div>
         <div class="text-area px-3">
-          <p class="text-white text-truncate m-0">Fat Funny Friend</p>
-          <p class="text-secondary text-truncate m-0 feed-time">Maddie Zahm</p>
+          <p class="text-white text-truncate m-0" id="player-song-name">
+            Fat Funny Friend
+          </p>
+          <p
+            class="text-secondary text-truncate m-0 feed-time"
+            id="player-artist-name"
+          >
+            Maddie Zahm
+          </p>
         </div>
         <div class="heart px-3">
           <i class="far fa-heart text-white"></i>
@@ -572,10 +582,10 @@
             id="timeline "
             class="d-flex align-items-center justify-content-center"
           >
-            <span id="current-time">--:--</span>
+            <span id="current-time" class="text-white pe-1">00:00</span>
 
-            <input type="range" class="slider" id="customRange1" />
-            <span id="total-time">--:--</span>
+            <input type="range" class="slider slider-song" id="customRange1" />
+            <span id="total-time" class="text-white ps-1">--:--</span>
           </div>
         </div>
       </div>
@@ -588,7 +598,7 @@
         ></a>
         <a href="#" class="me-2"><i class="fas fa-fax icon-color"></i></a>
         <a href="#"><i class="fas fa-volume-up me-2 icon-color"></i></a>
-        <input type="range" class="form-range me-2" id="customRange1" />
+        <input type="range" class="slider slider-vol me-2" id="customRange1" />
         <a href="#"><i class="fas fa-expand-alt me-2 icon-color"></i></a>
       </div>
     </div>
