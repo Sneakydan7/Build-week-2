@@ -654,6 +654,12 @@ ul {
 #total-time {
   min-width: 48px;
 }
+
+#player-artist-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: #b6b4b4;
+}
 /* SEARCH PAGE */
 
 .search-bar {
