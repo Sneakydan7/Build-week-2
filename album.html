@@ -104,18 +104,18 @@
         <div class="album-header pb-4">
           <div class="container-fluid d-flex align-items-end px-4">
             <div class="album-img me-4">
-              <img src="./assets/imgs/main/image-1.jpg" alt="" />
+              <img alt="" />
             </div>
             <div class="album-desc text-white">
               <h6 class="m-0">ALBUM</h6>
-              <h1 class="m-0">Album name</h1>
+              <h1 class="m-0"></h1>
               <div class="d-flex align-items-center">
                 <div class="artist-icon me-1">
-                  <img src="./assets/imgs/search/image-11.jpg" alt="" />
+                  <img alt="" />
                 </div>
                 <p class="m-0">
-                  <span><a href="#" class="link-light">Nome Artista</a></span> <span>· 2017 · xx brani,</span>
-                  <span id="album-duration">xx min xx sec.</span>
+                  <span><a href="#" class="link-light"></a></span> <span></span>
+                  <span id="album-duration"></span>
                 </p>
               </div>
             </div>
@@ -143,13 +143,13 @@
             </div>
           </div>
         </div>
-        <div class="my-5">1 gennaio 1999</div>
+        <div class="my-5"></div>
         <div class="show-interests d-flex align-items-center">
-          <div class="h4 text-white mt-2 fw-bold me-auto">Altro di Nome Artista</div>
+          <div class="h4 text-white mt-2 fw-bold me-auto"></div>
           <button class="h5 text-white mt-2 show-btn font-smaller">VISUALIZZA TUTTO</button>
         </div>
         <div
-          class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-4 row-cols-xxl-6 justify-content-between g-3 mt-1 pb-3"
+          class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-4 row-cols-xxl-6 justify-content-between g-3 mt-1 pb-5"
         >
           <div class="col">
             <div class="card card-bg">
@@ -315,11 +315,11 @@
     >
       <div class="song-current d-flex align-items-center">
         <div class="image">
-          <img src="./assets/imgs/search/image-12.jpg" alt="" style="width: 60px" />
+          <img id="player-img" src="./assets/imgs/search/image-12.jpg" alt="" style="width: 60px" />
         </div>
         <div class="text-area px-3">
-          <p class="text-white text-truncate m-0">Fat Funny Friend</p>
-          <p class="text-secondary text-truncate m-0 feed-time">Maddie Zahm</p>
+          <p class="text-white text-truncate m-0" id="player-song-name">Fat Funny Friend</p>
+          <p class="text-secondary text-truncate m-0 feed-time" id="player-artist-name">Maddie Zahm</p>
         </div>
         <div class="heart px-3">
           <i class="far fa-heart text-secondary"></i>
@@ -340,7 +340,7 @@
           ></a>
         </div>
         <div class="song-slider">
-          <div id="timeline " class="d-flex align-items-center justify-content-center">
+          <div id="timeline" class="d-flex align-items-center justify-content-center">
             <span id="current-time" class="text-white pe-1">00:00</span>
 
             <input type="range" class="slider slider-song" id="customRange1" />

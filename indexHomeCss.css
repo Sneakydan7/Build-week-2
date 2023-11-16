@@ -364,6 +364,11 @@ ul {
   letter-spacing: 0;
   font-weight: 500;
 }
+
+.song-title:hover {
+  cursor: pointer;
+}
+
 .song-title + p {
   letter-spacing: 0;
 }
@@ -626,4 +631,14 @@ ul {
   padding: 4px;
   padding-left: 12px;
   padding-right: 12px;
+}
+
+/* PLAYER SPECS */
+
+.text-area {
+  width: 180px;
+}
+#current-time,
+#total-time {
+  min-width: 48px;
 }
