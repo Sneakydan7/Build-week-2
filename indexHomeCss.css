@@ -681,10 +681,10 @@ ul {
 }
 
 .bottom-nav {
-  background: radial-gradient(
-    ellipse at 50% 0%,
-    rgba(0, 0, 0, 0.565) 53%,
-    rgba(0, 0, 0, 1) 64%
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.76) 53%,
+    rgba(0, 0, 0, 1) 74%
   );
 }
 
