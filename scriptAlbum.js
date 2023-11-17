@@ -22,8 +22,12 @@ function playSong(songName, artistName, img, duration) {
   }
 }
 
-window.addEventListener("DOMContentLoaded", () => {
+window.addEventListener("load", () => {
+  const colorThief = new ColorThief();
+  console.log(colorThief);
+
   // ALBUM CREATION
+
   fetch(URL, {
     method: "GET",
     headers: {
@@ -41,7 +45,15 @@ window.addEventListener("DOMContentLoaded", () => {
       console.log(albumObj);
 
       document.getElementsByTagName("h1")[0].innerText = albumObj.title;
-      document.querySelector(".album-img > img").src = albumObj.cover_medium;
+
+      const albumImg = document.querySelector(".album-img > img");
+      albumImg.src = albumObj.cover_medium;
+      albumImg.crossOrigin = "Anonymous";
+
+      albumImg.addEventListener("load", function () {
+        // colorThief.getColor(albumImg);
+        console.log(colorThief.getColor(albumImg));
+      });
 
       document.querySelector(".album-desc a").innerText = albumObj.artist.name;
       document.querySelector(".album-desc a").href = `./artistPage.html?_id=${albumObj.artist.id}`;
