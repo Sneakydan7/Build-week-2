@@ -30,7 +30,7 @@ window.addEventListener("load", () => {
   fetch(URL, {
     method: "GET",
     headers: {
-      "X-RapidAPI-Key": "324d031408msh0f6aa06c1f35eb0p17c00fjsne3d27a65a55b",
+      "X-RapidAPI-Key": "e126d7fbd2msh10cde410cebfc6ep16650ajsn1749d3a38861",
       "X-RapidAPI-Host": "deezerdevs-deezer.p.rapidapi.com",
     },
   })
@@ -163,7 +163,7 @@ window.addEventListener("load", () => {
       fetch(cardsURL, {
         method: "GET",
         headers: {
-          "X-RapidAPI-Key": "e8618b35ecmshe7d723b71cf8b65p11ab94jsn67ebdc6afccf",
+          "X-RapidAPI-Key": "e126d7fbd2msh10cde410cebfc6ep16650ajsn1749d3a38861",
           "X-RapidAPI-Host": "deezerdevs-deezer.p.rapidapi.com",
         },
       })

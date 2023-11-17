@@ -1,25 +1,19 @@
-const urlPlaylists =
-  'https://deezerdevs-deezer.p.rapidapi.com/search?q="playlist"';
+const urlPlaylists = 'https://deezerdevs-deezer.p.rapidapi.com/search?q="playlist"';
 
-const urlGramatik =
-  'https://deezerdevs-deezer.p.rapidapi.com/search?q="gramatik"';
+const urlGramatik = 'https://deezerdevs-deezer.p.rapidapi.com/search?q="gramatik"';
 
-const urlImagineDragons =
-  'https://deezerdevs-deezer.p.rapidapi.com/search?q="imagine-dragons"';
+const urlImagineDragons = 'https://deezerdevs-deezer.p.rapidapi.com/search?q="imagine-dragons"';
 
-const urlEdSheeran =
-  'https://deezerdevs-deezer.p.rapidapi.com/search?q="ed-sheeran"';
+const urlEdSheeran = 'https://deezerdevs-deezer.p.rapidapi.com/search?q="ed-sheeran"';
 
-const urlArcticMonkeys =
-  'https://deezerdevs-deezer.p.rapidapi.com/search?q="arctic-monkeys"';
+const urlArcticMonkeys = 'https://deezerdevs-deezer.p.rapidapi.com/search?q="arctic-monkeys"';
 
-const urlPhilCollins =
-  'https://deezerdevs-deezer.p.rapidapi.com/search?q="phil-collins"';
+const urlPhilCollins = 'https://deezerdevs-deezer.p.rapidapi.com/search?q="phil-collins"';
 
 const options = {
   method: "GET",
   headers: {
-    "X-RapidAPI-Key": "e8618b35ecmshe7d723b71cf8b65p11ab94jsn67ebdc6afccf",
+    "X-RapidAPI-Key": "e126d7fbd2msh10cde410cebfc6ep16650ajsn1749d3a38861",
     "X-RapidAPI-Host": "deezerdevs-deezer.p.rapidapi.com",
   },
 };
@@ -85,12 +79,7 @@ window.addEventListener("load", () => {
 
       let playButton = document.querySelector(".featured-btn-play");
       playButton.addEventListener("click", () =>
-        playSong(
-          song.title,
-          song.artist.name,
-          song.album.cover_small,
-          song.duration
-        )
+        playSong(song.title, song.artist.name, song.album.cover_small, song.duration)
       );
 
       let card3 = document.getElementById("card3");

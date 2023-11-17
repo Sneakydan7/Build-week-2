@@ -1,15 +1,12 @@
 const params = new URLSearchParams(window.location.search);
 const itemId = params.get("_id");
 const URL = "https://deezerdevs-deezer.p.rapidapi.com/artist/" + itemId;
-const urlTracklist =
-  "https://striveschool-api.herokuapp.com/api/deezer/artist/" +
-  itemId +
-  "/top?limit=10";
+const urlTracklist = "https://striveschool-api.herokuapp.com/api/deezer/artist/" + itemId + "/top?limit=10";
 
 fetch(URL, {
   method: "GET",
   headers: {
-    "X-RapidAPI-Key": "e8618b35ecmshe7d723b71cf8b65p11ab94jsn67ebdc6afccf",
+    "X-RapidAPI-Key": "e126d7fbd2msh10cde410cebfc6ep16650ajsn1749d3a38861",
     "X-RapidAPI-Host": "deezerdevs-deezer.p.rapidapi.com",
   },
 })
@@ -52,7 +49,7 @@ fetch(URL, {
 fetch(urlTracklist, {
   method: "GET",
   headers: {
-    "X-RapidAPI-Key": "e8618b35ecmshe7d723b71cf8b65p11ab94jsn67ebdc6afccf",
+    "X-RapidAPI-Key": "e126d7fbd2msh10cde410cebfc6ep16650ajsn1749d3a38861",
     "X-RapidAPI-Host": "deezerdevs-deezer.p.rapidapi.com",
   },
 })
@@ -103,9 +100,7 @@ fetch(urlTracklist, {
     
   </div>`;
 
-      row.addEventListener("click", () =>
-        playSong(e.title, e.artist.name, e.album.cover_small, e.duration)
-      );
+      row.addEventListener("click", () => playSong(e.title, e.artist.name, e.album.cover_small, e.duration));
       popularSongs.appendChild(row);
     });
   })
