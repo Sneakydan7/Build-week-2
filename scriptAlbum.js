@@ -62,6 +62,14 @@ window.addEventListener("load", () => {
             .join("");
         rgbToHex(RGB[0], RGB[1], RGB[2]);
         console.log(rgbToHex(RGB[0], RGB[1], RGB[2]));
+
+        const albumPage = document.querySelector(".album");
+        albumPage.style = ` background: linear-gradient(
+          180deg,
+          rgba(${RGB[0]}, ${RGB[1]}, ${RGB[2]}, 0.781) 0px,
+          rgba(18, 18, 18, 1) 640px
+        );
+        background-attachment: local;`;
       });
 
       document.querySelector(".album-desc a").innerText = albumObj.artist.name;
