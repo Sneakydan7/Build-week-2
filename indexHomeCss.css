@@ -531,7 +531,11 @@ ul {
 }
 
 .featured-bg {
-  background: radial-gradient(ellipse at 96% 0%, rgba(33, 33, 33, 1) 30%, rgba(7, 7, 7, 1) 65%);
+  background: radial-gradient(
+    ellipse at 96% 0%,
+    rgba(33, 33, 33, 1) 30%,
+    rgba(7, 7, 7, 1) 65%
+  );
 }
 .featured-btn-play {
   background-color: #1ed760;
@@ -617,7 +621,11 @@ ul {
 /*MEDIA QUERIES ARTIST PAGE:*/
 
 .artist-playlist-mobile button {
-  background: linear-gradient(180deg, rgba(34, 34, 34, 0.958) 0%, rgba(25, 25, 25, 0.936) 35%);
+  background: linear-gradient(
+    180deg,
+    rgba(34, 34, 34, 0.958) 0%,
+    rgba(25, 25, 25, 0.936) 35%
+  );
   color: rgb(238, 236, 236);
   font-size: 15px;
   font-weight: 500;
@@ -626,4 +634,16 @@ ul {
   padding: 4px;
   padding-left: 12px;
   padding-right: 12px;
+}
+
+@media screen and (min-width: 576px) {
+  .col-7 > h5 {
+    letter-spacing: 1.5px;
+    font-size: 23px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .col-7 > h5 {
+    letter-spacing: 0px;
+  }
 }
