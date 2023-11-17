@@ -20,8 +20,8 @@ const options = {
   method: "GET",
   headers: {
     "X-RapidAPI-Key": "e8618b35ecmshe7d723b71cf8b65p11ab94jsn67ebdc6afccf",
-    "X-RapidAPI-Host": "deezerdevs-deezer.p.rapidapi.com"
-  }
+    "X-RapidAPI-Host": "deezerdevs-deezer.p.rapidapi.com",
+  },
 };
 
 window.addEventListener("load", () => {
@@ -138,6 +138,12 @@ window.addEventListener("load", () => {
         <p class="card-text text-grey text-truncate">Scopri l'artista</p>
       </div>
     </div>`;
+
+      let album6 = document.getElementById("album6");
+      album6.innerHTML = `<span class="text-white album-font"> <a class= " link-pointer link-light link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover" href="./album.html?_id=${song.album.id}"> ${song.album.title}</a> </span>`;
+      console.log(song.album);
+      let album6Img = document.getElementById("album6-img");
+      album6Img.src = song.album.cover_medium;
 
       songsObj.data
         .forEach((e) => {

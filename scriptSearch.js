@@ -77,14 +77,19 @@ window.addEventListener("DOMContentLoaded", function () {
           const artistNameAnchor = document.createElement("a");
           artistNameAnchor.innerText = songObj.artist.name;
           artistNameAnchor.href = `./artistPage.html?_id=${songObj.artist.id}`;
-
+          artistNameAnchor.classList.add("text-secondary");
           artistName.appendChild(artistNameAnchor);
           songObjCol.appendChild(artistName);
 
           row.appendChild(songObjCol);
 
           const timeCol = document.createElement("div");
-          timeCol.classList.add("col-3", "flex-grow-1", "text-end");
+          timeCol.classList.add(
+            "col-3",
+            "flex-grow-1",
+            "text-end",
+            "text-secondary"
+          );
 
           const timeSpan = document.createElement("span");
           timeSpan.classList.add("d-none", "d-sm-inline");
