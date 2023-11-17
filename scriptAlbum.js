@@ -51,7 +51,6 @@ window.addEventListener("load", () => {
       albumImg.crossOrigin = "Anonymous";
 
       albumImg.addEventListener("load", function () {
-        // colorThief.getColor(albumImg);
         const RGB = colorThief.getColor(albumImg);
         const rgbToHex = (r, g, b) =>
           "#" +
