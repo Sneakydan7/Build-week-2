@@ -40,12 +40,16 @@
             ></a>
           </li>
           <li class="nav-item mb-2">
-            <a class="link-underline link-underline-opacity-0" href="#"
+            <a
+              class="link-underline link-underline-opacity-0"
+              href="./indexHome.html"
               ><i class="bi bi-house-door-fill align-middle"></i> Home</a
             >
           </li>
           <li class="nav-item mb-2">
-            <a class="link-underline link-underline-opacity-0" href="#"
+            <a
+              class="link-underline link-underline-opacity-0"
+              href="./indexSearch.html"
               ><i class="bi bi-search align-middle"></i> Cerca</a
             >
           </li>
@@ -80,7 +84,9 @@
         <ul id="playlist-ul"></ul>
       </div>
     </div>
-    <div class="homepage homepage-bg px-4 scroll position-relative w-100">
+    <div
+      class="homepage homepage-bg px-4 scroll position-relative pb-5 flex-grow-1"
+    >
       <div
         class="navigation d-flex align-items-center sticky-top w-100 px-4 pt-3 opacity-75"
       >
@@ -90,17 +96,19 @@
         <div class="arrow-right arrow-top">
           <a href="#"><i class="fas fa-chevron-right text-grey"></i> </a>
         </div>
-        <form id="form " class="me-auto ms-5">
-          <div class="form-group">
-            <input
-              type="text"
-              class="form-control search-bar"
-              id="search"
-              placeholder="search"
-            />
-          </div>
-        </form>
-        <div class="dropdown">
+        <div class="form-floating ms-5">
+          <input
+            type="text"
+            class="form-control search-bar"
+            id="floatingInput"
+            placeholder=""
+          />
+          <label for="floatingInput"
+            ><i class="fas fa-search text-white"></i
+          ></label>
+        </div>
+
+        <div class="dropdown ms-auto">
           <button
             class="btn btn-custom ps-0 pe-2 py-0 dropdown-toggle text-truncate text-white d-flex align-items-center"
             type="button"
@@ -126,6 +134,20 @@
           </ul>
         </div>
       </div>
+      <div class="row g-3 mt-1" id="result-artist"></div>
+      <div class="container-fluid ps-0 ps-lg-3 pe-0 pb-2 mt-5">
+        <div
+          id="album-songs-top"
+          class="row g-0 ps-3 pe-4 align-items-center border-bottom border-secondary border-opacity-25 text-white"
+        >
+          <div class="col-4 ps-4">Brani</div>
+
+          <div class="col-3 flex-grow-1 text-end">
+            <i class="far fa-clock"></i>
+          </div>
+        </div>
+      </div>
+      <div class="my-5" id="result-songs"></div>
     </div>
 
     <div class="activities d-none d-xl-block">
@@ -260,5 +282,6 @@
       </div>
     </div>
     <script src="./scriptHome.js"></script>
+    <script src="./scriptSearch.js"></script>
   </body>
 </html>

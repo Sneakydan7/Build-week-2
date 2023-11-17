@@ -19,7 +19,7 @@ const urlPhilCollins =
 const options = {
   method: "GET",
   headers: {
-    "X-RapidAPI-Key": "324d031408msh0f6aa06c1f35eb0p17c00fjsne3d27a65a55b",
+    "X-RapidAPI-Key": "8d63af669emshdafad7d6dbdccdcp1fd4fdjsnf403eadd8fcc",
     "X-RapidAPI-Host": "deezerdevs-deezer.p.rapidapi.com",
   },
 };
@@ -165,7 +165,7 @@ window.onload = () => {
         />
       </div>
       <div class="card-body">
-        <h5 class="card-title text-white"><a class= " link-pointer link-light link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover" href="./artistPage.html?_id=${song.album.id}">${song.artist.name}</a></h5>
+        <h5 class="card-title text-white"><a class= " link-pointer link-light link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover" href="./artistPage.html?_id=${song.artist.id}">${song.artist.name}</a></h5>
         <p class="card-text text-grey">Scopri l'artista</p>
       </div>
     </div>`;

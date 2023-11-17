@@ -313,6 +313,7 @@ ul {
 .album-song {
   counter-increment: myCounter 1;
   border-radius: 8px;
+  cursor: pointer;
 }
 .album-song:hover {
   background-color: rgba(83, 82, 82, 0.329);
@@ -548,7 +549,11 @@ ul {
 }
 
 .featured-bg {
-  background: radial-gradient(ellipse at 96% 0%, rgba(33, 33, 33, 1) 30%, rgba(7, 7, 7, 1) 65%);
+  background: radial-gradient(
+    ellipse at 96% 0%,
+    rgba(33, 33, 33, 1) 30%,
+    rgba(7, 7, 7, 1) 65%
+  );
 }
 .featured-btn-play {
   background-color: #1ed760;
@@ -634,7 +639,11 @@ ul {
 /*MEDIA QUERIES ARTIST PAGE:*/
 
 .artist-playlist-mobile button {
-  background: linear-gradient(180deg, rgba(34, 34, 34, 0.958) 0%, rgba(25, 25, 25, 0.936) 35%);
+  background: linear-gradient(
+    180deg,
+    rgba(34, 34, 34, 0.958) 0%,
+    rgba(25, 25, 25, 0.936) 35%
+  );
   color: rgb(238, 236, 236);
   font-size: 15px;
   font-weight: 500;
@@ -664,7 +673,31 @@ ul {
 
 .search-bar {
   background-color: #282828;
-  width: 500px;
+  width: 100%;
   padding: 13px;
   border-radius: 99em;
+  color: white;
+}
+
+.form-floating {
+  min-width: 50%;
+}
+
+.form-control:focus {
+  box-shadow: 0 0 0 0.1rem rgb(255, 255, 255) !important ;
+  background-color: #282828;
+  border-color: white;
+}
+.search-bar:focus {
+  background-color: #282828;
+  border-color: white;
+  box-shadow: 0 0 0 0.25rem rgba(white, 0.25);
+  color: white;
+}
+.form-floating > .form-control-plaintext ~ label::after,
+.form-floating > .form-control:focus ~ label::after,
+.form-floating > .form-control:not(:placeholder-shown) ~ label::after,
+.form-floating > .form-select ~ label::after {
+  background-color: unset;
+  padding: 10px;
 }
