@@ -56,9 +56,13 @@ window.addEventListener("load", () => {
       });
 
       document.querySelector(".album-desc a").innerText = albumObj.artist.name;
-      document.querySelector(".album-desc a").href = `./artistPage.html?_id=${albumObj.artist.id}`;
+      document.querySelector(
+        ".album-desc a"
+      ).href = `./artistPage.html?_id=${albumObj.artist.id}`;
       document.querySelector(".album-desc a").innerText = albumObj.artist.name;
-      document.querySelector(".album-desc a").href = `./artistPage.html?_id=${albumObj.artist.id}`;
+      document.querySelector(
+        ".album-desc a"
+      ).href = `./artistPage.html?_id=${albumObj.artist.id}`;
 
       const releaseYear = albumObj.release_date.slice(0, 4);
       document.querySelector(
@@ -67,17 +71,34 @@ window.addEventListener("load", () => {
 
       let minutes = Math.floor(albumObj.duration / 60);
       let seconds = albumObj.duration - minutes * 60;
-      document.querySelector(".album-desc span:last-of-type").innerText = `${minutes} min ${seconds} sec.`;
+      document.querySelector(
+        ".album-desc span:last-of-type"
+      ).innerText = `${minutes} min ${seconds} sec.`;
 
-      document.querySelector(".artist-icon > img").src = albumObj.artist.picture_small;
+      document.querySelector(".artist-icon > img").src =
+        albumObj.artist.picture_small;
 
-      document.getElementById("mobile-album-year").innerText = `Album · ${releaseYear}`;
+      document.getElementById(
+        "mobile-album-year"
+      ).innerText = `Album · ${releaseYear}`;
 
       albumObj.tracks.data.forEach((track) => {
-        const tracklist = document.querySelector(".album main div:nth-of-type(2)");
+        const tracklist = document.querySelector(
+          ".album main div:nth-of-type(2)"
+        );
 
         const row = document.createElement("div");
-        row.classList.add("row", "g-0", "mt-3", "ps-3", "py-1", "mt-3", "pe-4", "album-song", "align-items-center");
+        row.classList.add(
+          "row",
+          "g-0",
+          "mt-3",
+          "ps-3",
+          "py-1",
+          "mt-3",
+          "pe-4",
+          "album-song",
+          "align-items-center"
+        );
 
         let trackMinutes = Math.floor(track.duration / 60);
         let trackSeconds = track.duration - trackMinutes * 60;
@@ -86,11 +107,21 @@ window.addEventListener("load", () => {
         trackCol.classList.add("col-4", "d-flex", "flex-column");
 
         const songTitle = document.createElement("p");
-        songTitle.classList.add("ps-0", "ps-sm-4", "song-title", "text-truncate");
+        songTitle.classList.add(
+          "ps-0",
+          "ps-sm-4",
+          "song-title",
+          "text-truncate"
+        );
         songTitle.innerText = track.title;
 
-        songTitle.addEventListener("click", () =>
-          playSong(track.title, track.artist.name, albumObj.cover_small, track.duration)
+        row.addEventListener("click", () =>
+          playSong(
+            track.title,
+            track.artist.name,
+            albumObj.cover_small,
+            track.duration
+          )
         );
 
         trackCol.appendChild(songTitle);
@@ -136,8 +167,11 @@ window.addEventListener("load", () => {
         tracklist.appendChild(row);
       });
 
-      document.querySelector(".album main .container-fluid + div").innerText = albumObj.release_date;
-      document.querySelector(".show-interests div").innerText = `Altro da ${albumObj.artist.name}`;
+      document.querySelector(".album main .container-fluid + div").innerText =
+        albumObj.release_date;
+      document.querySelector(
+        ".show-interests div"
+      ).innerText = `Altro da ${albumObj.artist.name}`;
 
       // ALBUM CARDS CREATION
 
@@ -146,11 +180,13 @@ window.addEventListener("load", () => {
       let splitName = lowerCaseName.split(" ");
       let joinedName = splitName.join("-");
 
-      const cardsURL = "https://deezerdevs-deezer.p.rapidapi.com/search?q=" + joinedName;
+      const cardsURL =
+        "https://deezerdevs-deezer.p.rapidapi.com/search?q=" + joinedName;
       fetch(cardsURL, {
         method: "GET",
         headers: {
-          "X-RapidAPI-Key": "324d031408msh0f6aa06c1f35eb0p17c00fjsne3d27a65a55b",
+          "X-RapidAPI-Key":
+            "324d031408msh0f6aa06c1f35eb0p17c00fjsne3d27a65a55b",
           "X-RapidAPI-Host": "deezerdevs-deezer.p.rapidapi.com",
         },
       })
@@ -185,7 +221,11 @@ window.addEventListener("load", () => {
             cardBody.classList.add("card-body");
 
             const cardBodyH5 = document.createElement("h5");
-            cardBodyH5.classList.add("card-title", "text-white", "text-truncate");
+            cardBodyH5.classList.add(
+              "card-title",
+              "text-white",
+              "text-truncate"
+            );
 
             const cardTitleAnchor = document.createElement("a");
             cardTitleAnchor.classList.add("fs-5");
