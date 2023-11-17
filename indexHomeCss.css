@@ -358,11 +358,6 @@ ul {
   font-weight: 500;
 }
 
-@media screen and (max-width: 576px) {
-  #album-songs-top {
-    display: none;
-  }
-}
 #album-songs-top::before {
   content: "#";
   font-size: 1.3rem;
