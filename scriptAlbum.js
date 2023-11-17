@@ -74,7 +74,7 @@ window.addEventListener("DOMContentLoaded", () => {
         trackCol.classList.add("col-4", "d-flex", "flex-column");
 
         const songTitle = document.createElement("p");
-        songTitle.classList.add("ps-0", "ps-sm-4", "song-title");
+        songTitle.classList.add("ps-0", "ps-sm-4", "song-title", "text-truncate");
         songTitle.innerText = track.title;
 
         songTitle.addEventListener("click", () =>
