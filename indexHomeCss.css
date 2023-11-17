@@ -640,8 +640,8 @@ ul {
 .artist-playlist-mobile button {
   background: linear-gradient(
     180deg,
-    rgba(34, 34, 34, 0.958) 0%,
-    rgba(25, 25, 25, 0.936) 35%
+    rgba(30, 30, 30, 0.958) 0%,
+    rgba(20, 20, 20, 0.936) 35%
   );
   color: rgb(238, 236, 236);
   font-size: 15px;
@@ -652,6 +652,89 @@ ul {
   padding-left: 12px;
   padding-right: 12px;
 }
+@media screen and (min-width: 576px) {
+  .col-7 > h5 {
+    letter-spacing: 1.5px;
+    font-size: 23px;
+  }
+  .artist-cover-title {
+    font-size: 50px;
+  }
+
+  .liked-songs-mobile {
+    font-weight: 400;
+    margin-bottom: -3px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .col-7 > h5 {
+    letter-spacing: 0px;
+  }
+}
+
+/*ANIMATION TEXT PLAYER*/
+
+.bg-spotify-song {
+  height: 60px;
+  background-color: #2c2c2c;
+  border-radius: 6px;
+}
+
+.bottom-nav {
+  background: radial-gradient(
+    ellipse at 50% 0%,
+    rgba(0, 0, 0, 0.565) 53%,
+    rgba(0, 0, 0, 1) 64%
+  );
+}
+
+#scroll-container {
+  overflow: hidden;
+}
+
+#scroll-text {
+  -moz-transform: translateX(100%);
+  -webkit-transform: translateX(100%);
+  transform: translateX(100%);
+
+  -moz-animation: my-animation 15s linear infinite;
+  -webkit-animation: my-animation 15s linear infinite;
+  animation: my-animation 15s linear infinite;
+}
+
+/* Firefox */
+@-moz-keyframes my-animation {
+  from {
+    -moz-transform: translateX(100%);
+  }
+  to {
+    -moz-transform: translateX(-100%);
+  }
+}
+
+/* Chrome */
+@-webkit-keyframes my-animation {
+  from {
+    -webkit-transform: translateX(100%);
+  }
+  to {
+    -webkit-transform: translateX(-100%);
+  }
+}
+
+@keyframes my-animation {
+  from {
+    -moz-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+  to {
+    -moz-transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+}
+
 /* PLAYER SPECS */
 
 .text-area {
@@ -675,15 +758,4 @@ ul {
   width: 500px;
   padding: 13px;
   border-radius: 99em;
-
-@media screen and (min-width: 576px) {
-  .col-7 > h5 {
-    letter-spacing: 1.5px;
-    font-size: 23px;
-  }
-}
-@media screen and (min-width: 768px) {
-  .col-7 > h5 {
-    letter-spacing: 0px;
-  }
 }

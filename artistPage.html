@@ -50,8 +50,21 @@
           </li>
           <li class="nav-item mb-2">
             <a class="link-underline link-underline-opacity-0" href="#"
-              ><i class="bi bi-collection-play align-middle"></i> La tua
-              libreria</a
+              ><svg
+                role="img"
+                height="24"
+                width="24"
+                aria-hidden="true"
+                viewBox="0 0 24 24"
+                data-encore-id="icon"
+                class="Svg-sc-ytk21e-0 haNxPq me-2 align-middle"
+                fill="#b2b2b2"
+              >
+                <path
+                  d="M3 22a1 1 0 0 1-1-1V3a1 1 0 0 1 2 0v18a1 1 0 0 1-1 1zM15.5 2.134A1 1 0 0 0 14 3v18a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V6.464a1 1 0 0 0-.5-.866l-6-3.464zM9 2a1 1 0 0 0-1 1v18a1 1 0 1 0 2 0V3a1 1 0 0 0-1-1z"
+                ></path>
+              </svg>
+              La tua libreria</a
             >
           </li>
           <hr style="color: black" />
@@ -175,7 +188,9 @@
               ></i>
             </div>
             <div class="d-flex flex-column mx-3">
-              <h5 class="text-light">Brani che ti piacciono</h5>
+              <h5 class="text-light liked-songs-mobile">
+                Brani che ti piacciono
+              </h5>
               <span class="text-grey">8 brani di </span>
             </div>
           </div>
@@ -198,20 +213,24 @@
           <div class="row mx-1">
             <div class="col-7">
               <h5 class="fw-bold text-white ms-md-3">Popolari</h5>
-              <div
-                class="popular-playlist-songs"
-                style="counter-reset: my-sec-counter"
-              ></div>
-              <span class="fw-bold m-4 show-more">VISUALIZZA ALTRO</span>
+              <div class="popular-playlist-songs-container d-inline-block">
+                <div
+                  class="popular-playlist-songs mb-sm-3"
+                  style="counter-reset: my-sec-counter"
+                ></div>
+              </div>
+              <span class="fw-bold m-4 show-more d-none d-md-inline-block"
+                >VISUALIZZA ALTRO</span
+              >
             </div>
-            <div class="col-5 d-none d-md-block" id="artist-liked-songs">
+            <div class="col-5 d-none d-lg-block" id="artist-liked-songs">
               <h5 class="fw-bold text-white mb-4">Brani che ti piacciono</h5>
 
               <div
                 class="artist-badge-heart d-flex align-items-center d-md-block d-lg-flex"
               >
                 <div class="position-relative">
-                  <div class="artist-badge-img"></div>
+                  <div class="artist-img-badge"></div>
                   <i
                     class="fab fa-gratipay position-absolute bottom-0 end-0 translate-middle"
                   ></i>
@@ -288,7 +307,7 @@
     </div>
 
     <div
-      class="player container-fluid d-flex fixed-bottom background-main d-flex align-items-center justify-content-between px-3 py-2 border-top border-secondary border-opacity-25"
+      class="player container-fluid d-flex fixed-bottom background-main d-flex align-items-center justify-content-between px-3 py-2 border-top border-secondary border-opacity-25 d-none d-md-flex"
     >
       <div class="song-current d-flex align-items-center">
         <div class="image">
@@ -314,6 +333,7 @@
           <i class="far fa-heart text-white"></i>
         </div>
       </div>
+      <!--PLAYER-->
       <div
         class="song-player d-flex flex-column align-items-center flex-grow-1"
       >
@@ -361,6 +381,114 @@
         <a href="#"><i class="fas fa-expand-alt me-2 icon-color"></i></a>
       </div>
     </div>
+
+    <!--PLAYER-MOBILE-->
+    <footer
+      id="footer-mobile"
+      class="d-block d-md-none fixed-bottom text-white"
+    >
+      <!-- Player nel footer -->
+      <div
+        class="row mx-3 p-2 bg-spotify-song justify-content-center align-items-center"
+      >
+        <!-- Canzone -->
+        <div id="scroll-container" class="col-8">
+          <div id="scroll-text" class="p-2 scroll-text">
+            Nessuna canzone selezionata
+          </div>
+        </div>
+        <!-- Casse -->
+        <div class="col-1 p-1">
+          <i class="bi bi-speaker"></i>
+        </div>
+        <!-- Cuore -->
+        <div class="col-1 p-1">
+          <i class="far fa-heart"></i>
+        </div>
+        <!-- Play -->
+        <div class="col-1 p-1">
+          <i class="bi bi-play-fill"></i>
+        </div>
+      </div>
+      <!-- Menù-->
+      <div class="container-fluid bottom-nav p-3">
+        <div class="row justify-content-center align-items-center">
+          <!-- Home -->
+          <div class="col-3" onclick="location.href='./indexHome.html'">
+            <div
+              class="row row-cols-1 align-items-center justify-content-center home-nav"
+            >
+              <div class="text-center">
+                <svg
+                  role="img"
+                  height="24"
+                  width="24"
+                  aria-hidden="true"
+                  class="Svg-sc-ytk21e-0 haNxPq home-active-icon text-white text-center"
+                  viewBox="0 0 24 24"
+                  data-encore-id="icon"
+                  fill="white"
+                >
+                  <path
+                    d="M13.5 1.515a3 3 0 0 0-3 0L3 5.845a2 2 0 0 0-1 1.732V21a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-6h4v6a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V7.577a2 2 0 0 0-1-1.732l-7.5-4.33z"
+                  ></path>
+                </svg>
+              </div>
+              <div class="text-center">Home</div>
+            </div>
+          </div>
+          <!-- Cerca -->
+          <div class="col-3" onclick="location.href='./indexSearch.html'">
+            <div
+              class="row row-cols-1 align-items-center justify-content-center"
+            >
+              <div class="text-center">
+                <svg
+                  role="img"
+                  height="24"
+                  width="24"
+                  aria-hidden="true"
+                  class="Svg-sc-ytk21e-0 haNxPq search-icon"
+                  viewBox="0 0 24 24"
+                  data-encore-id="icon"
+                  fill="white"
+                >
+                  <path
+                    d="M10.533 1.279c-5.18 0-9.407 4.14-9.407 9.279s4.226 9.279 9.407 9.279c2.234 0 4.29-.77 5.907-2.058l4.353 4.353a1 1 0 1 0 1.414-1.414l-4.344-4.344a9.157 9.157 0 0 0 2.077-5.816c0-5.14-4.226-9.28-9.407-9.28zm-7.407 9.279c0-4.006 3.302-7.28 7.407-7.28s7.407 3.274 7.407 7.28-3.302 7.279-7.407 7.279-7.407-3.273-7.407-7.28z"
+                  ></path>
+                </svg>
+              </div>
+              <div class="text-center">Cerca</div>
+            </div>
+          </div>
+          <!-- Libreria-->
+          <div class="col-3">
+            <div
+              class="row row-cols-1 align-items-center justify-content-center"
+            >
+              <div class="text-center">
+                <svg
+                  role="img"
+                  height="24"
+                  width="24"
+                  aria-hidden="true"
+                  viewBox="0 0 24 24"
+                  data-encore-id="icon"
+                  class="Svg-sc-ytk21e-0 haNxPq"
+                  fill="white"
+                >
+                  <path
+                    d="M3 22a1 1 0 0 1-1-1V3a1 1 0 0 1 2 0v18a1 1 0 0 1-1 1zM15.5 2.134A1 1 0 0 0 14 3v18a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V6.464a1 1 0 0 0-.5-.866l-6-3.464zM9 2a1 1 0 0 0-1 1v18a1 1 0 1 0 2 0V3a1 1 0 0 0-1-1z"
+                  ></path>
+                </svg>
+              </div>
+              <div class="text-center">La tua libreria</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
     <script src="./scriptHome.js"></script>
     <script src="./scriptArtist.js"></script>
   </body>

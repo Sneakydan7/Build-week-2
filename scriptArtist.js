@@ -25,13 +25,16 @@ fetch(URL, {
     let artistTitle = document.querySelector(".artist-cover-title");
     artistTitle.innerText = `${artistObj.name}`;
 
-    let imgBadge = document.querySelector(".artist-img-badge");
-    imgBadge.innerHTML = `<img
-          src="${artistObj.picture_small}"
+    /*let imgBadge = document.querySelectorAll(".artist-img-badge");
+    console.log(imgBadge);
+    imgBadge.forEach((e) => {
+      imgBadge.innerHTML = `<img
+          src="${e.picture_small}"
           class="card-img-top"
           alt="..."
           style="border-radius: 5px"
         />`;
+    });*/
   })
   .catch((error) => Error(error));
 
@@ -70,19 +73,22 @@ fetch(urlTracklist, {
       let trackSeconds = e.duration - trackMinutes * 60;
 
       row.innerHTML = `
-    <div class="col-5 mx-1 d-flex align-items-center text-center text-nowrap">
+    <div class="col-5 mx-1 d-flex align-items-center text-center text-nowrap  text-xl-nowrap">
       <img
         src=${e.album.cover_small}
         alt=""
       />
-      <p class="m-1 p-2">${e.title}</p>
+      <p class="m-1 p-2 d-md-block">${e.title}</p>
     </div>
-    <div class="col-3 text-end">
-      <p class="m-1 p-2 ">${e.rank}</p>
+    <div class="col-3 text-end d-none d-md-block ranks">
+      <p class="m-1 p-2 " >${e.rank}</p>
+    
     </div>
-    <div class="col-3 text-end flex-grow-1 d-sm-none">
-      <p class="m-1 p-2 ">${trackMinutes}:${trackSeconds}</p>
+    <div class="col-3 text-end flex-grow-1 times">
+      <p class="m-1 p-2 d-none d-md-block">${trackMinutes}:${trackSeconds}</p> 
+       <a class="d-md-none text-grey "> <i class="bi bi-three-dots-vertical"></i></a>
     </div>
+    
   </div>`;
       popularSongs.appendChild(row);
     });
