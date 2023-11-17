@@ -24,7 +24,6 @@ function playSong(songName, artistName, img, duration) {
 
 window.addEventListener("load", () => {
   const colorThief = new ColorThief();
-  console.log(colorThief);
 
   // ALBUM CREATION
 
@@ -42,8 +41,6 @@ window.addEventListener("load", () => {
       return resp.json();
     })
     .then((albumObj) => {
-      console.log(albumObj);
-
       document.getElementsByTagName("h1")[0].innerText = albumObj.title;
 
       const albumImg = document.querySelector(".album-img > img");
@@ -61,7 +58,14 @@ window.addEventListener("load", () => {
             })
             .join("");
         rgbToHex(RGB[0], RGB[1], RGB[2]);
-        console.log(rgbToHex(RGB[0], RGB[1], RGB[2]));
+
+        const albumPage = document.querySelector(".album");
+        albumPage.style = ` background: linear-gradient(
+          180deg,
+          rgba(${RGB[0]}, ${RGB[1]}, ${RGB[2]}, 0.781) 0px,
+          rgba(18, 18, 18, 1) 640px
+        );
+        background-attachment: local;`;
       });
 
       document.querySelector(".album-desc a").innerText = albumObj.artist.name;
@@ -171,7 +175,7 @@ window.addEventListener("load", () => {
         })
         .then((artistObj) => {
           let arrayForCards = artistObj.data.slice(0, 6);
-          console.log(arrayForCards);
+
           const cardsRow = document.getElementsByClassName("row-cols-1")[0];
           arrayForCards.forEach((element) => {
             const cardCol = document.createElement("div");
@@ -221,12 +225,13 @@ window.addEventListener("load", () => {
 
   const album = document.querySelector(".album");
   const albumTextTop = document.getElementById("album-songs-top");
+
   album.addEventListener("scroll", () => {
     console.log(album.scrollTop);
     if (album.scrollTop >= 455) {
-      albumTextTop.style = "transition: background-color 0.7s; background-color: #121212; padding-inline: 2rem;";
+      albumTextTop.style = "transition: background-color 0.4s; background-color: #121212; padding-inline: 2rem;";
     } else if (album.scrollTop <= 450) {
-      albumTextTop.style = "transition: background-color 0.7s; background-color: transparent;";
+      albumTextTop.style = "transition: background-color 0.4s; background-color: transparent;";
     }
   });
 });
