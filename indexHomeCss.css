@@ -197,14 +197,6 @@ ul {
   height: calc(100% - 101px);
   flex-grow: 1;
   overflow-y: auto;
-  background: rgb(226, 196, 80);
-  background: linear-gradient(
-    180deg,
-    rgba(214, 183, 56, 0.781) 0px,
-    rgba(89, 78, 39, 0.9360119047619048) 450px,
-    rgba(18, 18, 18, 1) 640px
-  );
-  background-attachment: local;
 }
 @media screen and (max-width: 991px) {
   .album {
@@ -366,11 +358,6 @@ ul {
   font-weight: 500;
 }
 
-@media screen and (max-width: 576px) {
-  #album-songs-top {
-    display: none;
-  }
-}
 #album-songs-top::before {
   content: "#";
   font-size: 1.3rem;
@@ -578,11 +565,7 @@ ul {
 }
 
 .featured-bg {
-  background: radial-gradient(
-    ellipse at 96% 0%,
-    rgba(33, 33, 33, 1) 30%,
-    rgba(7, 7, 7, 1) 65%
-  );
+  background: radial-gradient(ellipse at 96% 0%, rgba(33, 33, 33, 1) 30%, rgba(7, 7, 7, 1) 65%);
 }
 .featured-btn-play {
   background-color: #1ed760;
@@ -670,16 +653,8 @@ ul {
 /*MEDIA QUERIES ARTIST PAGE:*/
 
 .artist-playlist-mobile button {
-  background: linear-gradient(
-    180deg,
-    rgba(34, 34, 34, 0.958) 0%,
-    rgba(25, 25, 25, 0.936) 35%
-  );
-  background: linear-gradient(
-    180deg,
-    rgba(30, 30, 30, 0.958) 0%,
-    rgba(20, 20, 20, 0.936) 35%
-  );
+  background: linear-gradient(180deg, rgba(34, 34, 34, 0.958) 0%, rgba(25, 25, 25, 0.936) 35%);
+  background: linear-gradient(180deg, rgba(30, 30, 30, 0.958) 0%, rgba(20, 20, 20, 0.936) 35%);
   color: rgb(238, 236, 236);
   font-size: 15px;
   font-weight: 500;
@@ -728,11 +703,7 @@ ul {
 }
 
 .bottom-nav {
-  background: linear-gradient(
-    180deg,
-    rgba(0, 0, 0, 0.76) 53%,
-    rgba(0, 0, 0, 1) 74%
-  );
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.76) 53%, rgba(0, 0, 0, 1) 74%);
 }
 
 #scroll-container {
