@@ -401,8 +401,8 @@ ul {
 
 .artist-cover {
   height: 380px;
-  object-fit: cover;
-  background-size: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .artist-verified {

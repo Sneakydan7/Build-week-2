@@ -25,16 +25,27 @@ fetch(URL, {
     let artistTitle = document.querySelector(".artist-cover-title");
     artistTitle.innerText = `${artistObj.name}`;
 
-    /*let imgBadge = document.querySelectorAll(".artist-img-badge");
+    let artistPicture = document.querySelector(".artist-cover");
+    artistPicture.style = `background-image: url('${artistObj.picture_big}')`;
+
+    let imgBadge = document.querySelectorAll(".artist-img-badge");
     console.log(imgBadge);
     imgBadge.forEach((e) => {
-      imgBadge.innerHTML = `<img
-          src="${e.picture_small}"
+      e.innerHTML = `<img
+          src="${artistObj.picture_small}"
           class="card-img-top"
           alt="..."
           style="border-radius: 5px"
         />`;
-    });*/
+    });
+
+    let spanBadgeMobile = document.querySelector(".liked-songs-span");
+    console.log(spanBadgeMobile);
+    spanBadgeMobile.innerText = `10 Brani di ${artistObj.name}`;
+
+    let spanBadge = document.querySelector(".artist-badge-name");
+    console.log(spanBadge);
+    spanBadge.innerText = `Di ${artistObj.name}`;
   })
   .catch((error) => Error(error));
 
@@ -78,7 +89,8 @@ fetch(urlTracklist, {
         src=${e.album.cover_small}
         alt=""
       />
-      <p class="m-1 p-2 d-md-block">${e.title}</p>
+      <p class="m-1 ps-2 d-md-block text-truncate">${e.title}</p>
+      
     </div>
     <div class="col-3 text-end d-none d-md-block ranks">
       <p class="m-1 p-2 " >${e.rank}</p>
