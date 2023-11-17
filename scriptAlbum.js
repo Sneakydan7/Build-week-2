@@ -59,6 +59,8 @@ window.addEventListener("DOMContentLoaded", () => {
 
       document.querySelector(".artist-icon > img").src = albumObj.artist.picture_small;
 
+      document.getElementById("mobile-album-year").innerText = `Album · ${releaseYear}`;
+
       albumObj.tracks.data.forEach((track) => {
         const tracklist = document.querySelector(".album main div:nth-of-type(2)");
 
