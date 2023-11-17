@@ -1,14 +1,20 @@
-const urlPlaylists = 'https://deezerdevs-deezer.p.rapidapi.com/search?q="playlist"';
+const urlPlaylists =
+  'https://deezerdevs-deezer.p.rapidapi.com/search?q="playlist"';
 
-const urlGramatik = 'https://deezerdevs-deezer.p.rapidapi.com/search?q="gramatik"';
+const urlGramatik =
+  'https://deezerdevs-deezer.p.rapidapi.com/search?q="gramatik"';
 
-const urlImagineDragons = 'https://deezerdevs-deezer.p.rapidapi.com/search?q="imagine-dragons"';
+const urlImagineDragons =
+  'https://deezerdevs-deezer.p.rapidapi.com/search?q="imagine-dragons"';
 
-const urlEdSheeran = 'https://deezerdevs-deezer.p.rapidapi.com/search?q="ed-sheeran"';
+const urlEdSheeran =
+  'https://deezerdevs-deezer.p.rapidapi.com/search?q="ed-sheeran"';
 
-const urlArcticMonkeys = 'https://deezerdevs-deezer.p.rapidapi.com/search?q="arctic-monkeys"';
+const urlArcticMonkeys =
+  'https://deezerdevs-deezer.p.rapidapi.com/search?q="arctic-monkeys"';
 
-const urlPhilCollins = 'https://deezerdevs-deezer.p.rapidapi.com/search?q="phil-collins"';
+const urlPhilCollins =
+  'https://deezerdevs-deezer.p.rapidapi.com/search?q="phil-collins"';
 
 const options = {
   method: "GET",
@@ -68,7 +74,7 @@ window.addEventListener("load", () => {
         <div class="featured-buttons d-flex align-items-center">
           <a class="featured-btn-play text-dark me-4" >Play</a>
           <a class="featured-btn-save text-white me-4">Salva</a>
-          <div class="dots"><i class="fas fa-ellipsis-h fs-6"></i></div>
+          <div class="dots d-none d-lg-flex"><i class="fas fa-ellipsis-h fs-6"></i></div>
         </div>
       </div>
       <div class="hide-announcements pt-3 me-2">
@@ -79,7 +85,12 @@ window.addEventListener("load", () => {
 
       let playButton = document.querySelector(".featured-btn-play");
       playButton.addEventListener("click", () =>
-        playSong(song.title, song.artist.name, song.album.cover_small, song.duration)
+        playSong(
+          song.title,
+          song.artist.name,
+          song.album.cover_small,
+          song.duration
+        )
       );
 
       let card3 = document.getElementById("card3");
@@ -93,8 +104,8 @@ window.addEventListener("load", () => {
         />
       </div>
       <div class="card-body ">
-        <h5 class="card-title text-white"><a class= " link-pointer link-light link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover" href="./artistPage.html?_id=${song.artist.id}">${song.artist.name}</a></h5>
-        <p class="card-text text-grey">Scopri l'artista</p>
+        <h5 class="card-title text-white text-truncate"><a class= " link-pointer link-light link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover" href="./artistPage.html?_id=${song.artist.id}">${song.artist.name}</a></h5>
+        <p class="card-text text-grey text-truncate">Scopri l'artista</p>
       </div>
     </div>`;
 
@@ -123,8 +134,8 @@ window.addEventListener("load", () => {
         />
       </div>
       <div class="card-body">
-        <h5 class="card-title text-white"><a class= " link-pointer link-light link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover" href="./artistPage.html?_id=${song.artist.id}">${song.artist.name}</a></h5>
-        <p class="card-text text-grey">Scopri l'artista</p>
+        <h5 class="card-title text-white text-truncate"><a class= " link-pointer link-light link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover" href="./artistPage.html?_id=${song.artist.id}">${song.artist.name}</a></h5>
+        <p class="card-text text-grey text-truncate">Scopri l'artista</p>
       </div>
     </div>`;
 
@@ -154,8 +165,8 @@ window.addEventListener("load", () => {
         />
       </div>
       <div class="card-body">
-        <h5 class="card-title text-white"><a class= " link-pointer link-light link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover" href="./artistPage.html?_id=${song.artist.id}">${song.artist.name}</a></h5>
-        <p class="card-text text-grey">Scopri l'artista</p>
+        <h5 class="card-title text-white text-truncate"><a class= " link-pointer link-light link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover" href="./artistPage.html?_id=${song.artist.id}">${song.artist.name}</a></h5>
+        <p class="card-text text-grey text-truncate">Scopri l'artista</p>
       </div>
     </div>`;
 
@@ -189,8 +200,8 @@ window.addEventListener("load", () => {
         />
       </div>
       <div class="card-body">
-        <h5 class="card-title text-white"><a class= " link-pointer link-light link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover" href="./artistPage.html?_id=${song.artist.id}">${song.artist.name}</a></h5>
-        <p class="card-text text-grey">Scopri l'artista</p>
+        <h5 class="card-title text-white text-truncate"><a class= " link-pointer link-light link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover" href="./artistPage.html?_id=${song.artist.id}">${song.artist.name}</a></h5>
+        <p class="card-text text-grey text-truncate">Scopri l'artista</p>
       </div>
     </div>`;
 
@@ -224,8 +235,8 @@ window.addEventListener("load", () => {
         />
       </div>
       <div class="card-body">
-        <h5 class="card-title text-white"><a class= " link-pointer link-light link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover" href="./artistPage.html?_id=${song.artist.id}">${song.artist.name}</a></h5>
-        <p class="card-text text-grey">Scopri l'artista</p>
+        <h5 class="card-title text-white text-truncate"><a class= " link-pointer link-light link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover" href="./artistPage.html?_id=${song.artist.id}">${song.artist.name}</a></h5>
+        <p class="card-text text-grey text-truncate">Scopri l'artista</p>
       </div>
     </div>`;
 
