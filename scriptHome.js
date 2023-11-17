@@ -19,9 +19,9 @@ const urlPhilCollins =
 const options = {
   method: "GET",
   headers: {
-    "X-RapidAPI-Key": "8d63af669emshdafad7d6dbdccdcp1fd4fdjsnf403eadd8fcc",
-    "X-RapidAPI-Host": "deezerdevs-deezer.p.rapidapi.com",
-  },
+    "X-RapidAPI-Key": "e8618b35ecmshe7d723b71cf8b65p11ab94jsn67ebdc6afccf",
+    "X-RapidAPI-Host": "deezerdevs-deezer.p.rapidapi.com"
+  }
 };
 
 window.addEventListener("load", () => {

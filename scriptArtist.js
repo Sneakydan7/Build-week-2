@@ -9,7 +9,7 @@ const urlTracklist =
 fetch(URL, {
   method: "GET",
   headers: {
-    "X-RapidAPI-Key": "502b14b9demsh6c69f58b54e3ac4p1edca2jsn4ad89cccab70",
+    "X-RapidAPI-Key": "e8618b35ecmshe7d723b71cf8b65p11ab94jsn67ebdc6afccf",
     "X-RapidAPI-Host": "deezerdevs-deezer.p.rapidapi.com"
   }
 })
@@ -52,7 +52,7 @@ fetch(URL, {
 fetch(urlTracklist, {
   method: "GET",
   headers: {
-    "X-RapidAPI-Key": "502b14b9demsh6c69f58b54e3ac4p1edca2jsn4ad89cccab70",
+    "X-RapidAPI-Key": "e8618b35ecmshe7d723b71cf8b65p11ab94jsn67ebdc6afccf",
     "X-RapidAPI-Host": "deezerdevs-deezer.p.rapidapi.com"
   }
 })
