@@ -102,32 +102,35 @@
       <header>
         <div class="my-5"></div>
         <div class="album-header pb-4">
-          <div class="container-fluid d-flex align-items-end px-4">
-            <div class="album-img me-4">
+          <div class="container-fluid d-flex flex-column flex-md-row align-items-md-end px-4">
+            <div class="album-img flex-shrink-0 align-self-center me-4">
               <img alt="" />
             </div>
             <div class="album-desc text-white">
-              <h6 class="m-0">ALBUM</h6>
-              <h1 class="m-0"></h1>
-              <div class="d-flex align-items-center">
-                <div class="artist-icon me-1">
+              <h6 class="d-none d-md-block m-0">ALBUM</h6>
+              <h1 class="m-0 mt-3 mt-md-0"></h1>
+              <div class="d-flex align-items-center mt-3 mt-md-0">
+                <div class="artist-icon me-2 me-md-1">
                   <img alt="" />
                 </div>
                 <p class="m-0">
-                  <span><a href="#" class="link-light"></a></span> <span></span>
-                  <span id="album-duration"></span>
+                  <span><a href="#" class="link-light"></a></span> <span class="d-none d-md-inline"></span>
+                  <span class="d-none d-md-inline" id="album-duration"></span>
                 </p>
               </div>
+              <p id="mobile-album-year" class="d-block d-md-none mt-2 mb-0"></p>
             </div>
           </div>
         </div>
       </header>
       <main class="px-4">
-        <div class="artist-playlist p-4 d-flex align-items-center">
-          <a href="" class=""><i class="fas fa-play-circle"></i></a>
-          <a href="" class="ms-4 me-2"><i class="far fa-heart"></i></a>
-          <a href="" class="ms-3 me-4"><i class="far fa-arrow-alt-circle-down"></i></a>
+        <div class="artist-playlist px-0 px-md-4 py-4 d-flex align-items-center">
+          <a href="" class="d-none d-md-inline"><i class="fas fa-play-circle"></i></a>
+          <a href="#" class="ms-0 ms-md-4 me-2"><i class="far fa-heart"></i></a>
+          <a href="#" class="ms-3 me-4"><i class="far fa-arrow-alt-circle-down"></i></a>
           <a href="" class=""><i class="bi bi-three-dots"></i></a>
+          <a href="" class="d-inline d-md-none ms-auto"><i class="fas fa-random"></i></a>
+          <a href="" class="d-inline d-md-none ms-4"><i class="fas fa-play-circle"></i></a>
         </div>
 
         <div class="container-fluid ps-0 ps-lg-3 pe-0 pb-2">
@@ -260,7 +263,8 @@
         <a href="#"><i class="fas fa-expand-alt me-2 icon-color"></i></a>
       </div>
     </div>
-    <!-- <script src="./scriptHome.js"></script> -->
+    <script src="./scriptHome.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/color-thief/2.3.0/color-thief.umd.js"></script>
     <script src="./scriptAlbum.js"></script>
   </body>
 </html>
