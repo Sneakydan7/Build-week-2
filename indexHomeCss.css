@@ -342,6 +342,7 @@ ul {
   content: counter(myCounter);
   font-size: 1.3rem;
   min-width: 20px;
+  color: #6c757d;
 }
 @media screen and (max-width: 576px) {
   .album-song::before {
@@ -577,7 +578,11 @@ ul {
 }
 
 .featured-bg {
-  background: radial-gradient(ellipse at 96% 0%, rgba(33, 33, 33, 1) 30%, rgba(7, 7, 7, 1) 65%);
+  background: radial-gradient(
+    ellipse at 96% 0%,
+    rgba(33, 33, 33, 1) 30%,
+    rgba(7, 7, 7, 1) 65%
+  );
 }
 .featured-btn-play {
   background-color: #1ed760;
@@ -665,8 +670,16 @@ ul {
 /*MEDIA QUERIES ARTIST PAGE:*/
 
 .artist-playlist-mobile button {
-  background: linear-gradient(180deg, rgba(34, 34, 34, 0.958) 0%, rgba(25, 25, 25, 0.936) 35%);
-  background: linear-gradient(180deg, rgba(30, 30, 30, 0.958) 0%, rgba(20, 20, 20, 0.936) 35%);
+  background: linear-gradient(
+    180deg,
+    rgba(34, 34, 34, 0.958) 0%,
+    rgba(25, 25, 25, 0.936) 35%
+  );
+  background: linear-gradient(
+    180deg,
+    rgba(30, 30, 30, 0.958) 0%,
+    rgba(20, 20, 20, 0.936) 35%
+  );
   color: rgb(238, 236, 236);
   font-size: 15px;
   font-weight: 500;
@@ -715,7 +728,11 @@ ul {
 }
 
 .bottom-nav {
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.76) 53%, rgba(0, 0, 0, 1) 74%);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.76) 53%,
+    rgba(0, 0, 0, 1) 74%
+  );
 }
 
 #scroll-container {
