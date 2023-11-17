@@ -10,8 +10,8 @@ fetch(URL, {
   method: "GET",
   headers: {
     "X-RapidAPI-Key": "e8618b35ecmshe7d723b71cf8b65p11ab94jsn67ebdc6afccf",
-    "X-RapidAPI-Host": "deezerdevs-deezer.p.rapidapi.com"
-  }
+    "X-RapidAPI-Host": "deezerdevs-deezer.p.rapidapi.com",
+  },
 })
   .then((resp) => {
     if (!resp) {
@@ -53,8 +53,8 @@ fetch(urlTracklist, {
   method: "GET",
   headers: {
     "X-RapidAPI-Key": "e8618b35ecmshe7d723b71cf8b65p11ab94jsn67ebdc6afccf",
-    "X-RapidAPI-Host": "deezerdevs-deezer.p.rapidapi.com"
-  }
+    "X-RapidAPI-Host": "deezerdevs-deezer.p.rapidapi.com",
+  },
 })
   .then((resp) => {
     if (!resp) {
@@ -103,7 +103,26 @@ fetch(urlTracklist, {
     
   </div>`;
 
+      row.addEventListener("click", () =>
+        playSong(e.title, e.artist.name, e.album.cover_small, e.duration)
+      );
       popularSongs.appendChild(row);
     });
   })
   .catch((error) => Error(error));
+
+function playSong(songName, artistName, img, duration) {
+  let song = document.getElementById("player-song-name");
+  let artist = document.getElementById("player-artist-name");
+  let image = document.getElementById("player-img");
+  let time = document.getElementById("total-time");
+
+  song.innerText = songName;
+  artist.innerText = artistName;
+  image.src = img;
+
+  let minutes = Math.floor(duration / 60);
+  let seconds = duration - minutes * 60;
+
+  time.innerText = `${minutes}:${seconds} `;
+}

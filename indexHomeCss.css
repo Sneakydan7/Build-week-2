@@ -366,11 +366,6 @@ ul {
   font-weight: 500;
 }
 
-@media screen and (max-width: 576px) {
-  #album-songs-top {
-    display: none;
-  }
-}
 #album-songs-top::before {
   content: "#";
   font-size: 1.3rem;
@@ -850,5 +845,23 @@ ul {
 @media screen and (min-width: 768px) {
   .col-7 > h5 {
     letter-spacing: 0px;
+  }
+}
+
+/* MEDIA QUERY SEARCH PAGE */
+
+.search-placeholder {
+  font-size: 14px;
+}
+
+@media screen and (max-width: 1122px) {
+  #search-user {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .homepage-bg {
+    background-color: #121212;
   }
 }
