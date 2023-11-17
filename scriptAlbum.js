@@ -50,19 +50,20 @@ window.addEventListener("load", () => {
       albumImg.src = albumObj.cover_medium;
       albumImg.crossOrigin = "Anonymous";
 
-      // albumImg.addEventListener("load", function () {
-      //   // colorThief.getColor(albumImg);
-      //   const RGB = colorThief.getColor(albumImg);
-      // });
-      // const rgbToHex = (r, g, b) =>
-      //   "#" +
-      //   [r, g, b]
-      //     .map((x) => {
-      //       const hex = x.toString(16);
-      //       return hex.length === 1 ? "0" + hex : hex;
-      //     })
-      //     .join("");
-      // rgbToHex(RGB[0], RGB[1], RGB[2]);
+      albumImg.addEventListener("load", function () {
+        // colorThief.getColor(albumImg);
+        const RGB = colorThief.getColor(albumImg);
+        const rgbToHex = (r, g, b) =>
+          "#" +
+          [r, g, b]
+            .map((x) => {
+              const hex = x.toString(16);
+              return hex.length === 1 ? "0" + hex : hex;
+            })
+            .join("");
+        rgbToHex(RGB[0], RGB[1], RGB[2]);
+        console.log(rgbToHex(RGB[0], RGB[1], RGB[2]));
+      });
 
       document.querySelector(".album-desc a").innerText = albumObj.artist.name;
       document.querySelector(".album-desc a").href = `./artistPage.html?_id=${albumObj.artist.id}`;
@@ -159,7 +160,7 @@ window.addEventListener("load", () => {
       fetch(cardsURL, {
         method: "GET",
         headers: {
-          "X-RapidAPI-Key": "324d031408msh0f6aa06c1f35eb0p17c00fjsne3d27a65a55b",
+          "X-RapidAPI-Key": "e8618b35ecmshe7d723b71cf8b65p11ab94jsn67ebdc6afccf",
           "X-RapidAPI-Host": "deezerdevs-deezer.p.rapidapi.com",
         },
       })
@@ -218,4 +219,15 @@ window.addEventListener("load", () => {
         .catch((error) => Error(error));
     })
     .catch((error) => Error(error));
+
+  const album = document.querySelector(".album");
+  const albumTextTop = document.getElementById("album-songs-top");
+  album.addEventListener("scroll", () => {
+    console.log(album.scrollTop);
+    if (album.scrollTop >= 455) {
+      albumTextTop.style = "transition: background-color 0.7s; background-color: #121212; padding-inline: 2rem;";
+    } else if (album.scrollTop <= 450) {
+      albumTextTop.style = "transition: background-color 0.7s; background-color: transparent;";
+    }
+  });
 });
